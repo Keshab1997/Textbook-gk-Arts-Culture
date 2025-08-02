@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ২ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="Qset1.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset3.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 2 (প্রশ্ন ১১-২০)",
+            questions: [
+                { question: "নিচের কোনটি একটি ফসল কাটার উৎসব?", options: ["তীজ", "জন্মাষ্টমী", "দীপাবলি", "ওনাম"], answer: 3, explanation: "ওনাম হল কেরালার একটি প্রধান ফসল কাটার উৎসব।" },
+                { question: "'সোলুং' উৎসব কোন রাজ্যে পালিত হয়?", options: ["অরুণাচল প্রদেশ", "কেরালা", "অন্ধ্রপ্রদেশ", "হিমাচল প্রদেশ"], answer: 0, explanation: "সোলুং হল অরুণাচল প্রদেশের আদি উপজাতির একটি কৃষিভিত্তিক উৎসব।" },
+                { question: "নিচের কোনটি রাজস্থানের ঐতিহ্যবাহী নৃত্য নয়?", options: ["ঘুমর", "কথপুতলি", "গৈর", "দুমহাল"], answer: 3, explanation: "দুমহাল জম্মু ও কাশ্মীরের একটি লোকনৃত্য।" },
+                { question: "ভরতনাট্যমের উৎপত্তি কোন রাজ্যে?", options: ["ওড়িশা", "গুজরাট", "কেরালা", "তামিলনাড়ু"], answer: 3, explanation: "ভরতনাট্যম ভারতের অন্যতম প্রধান শাস্ত্রীয় নৃত্য, যার উৎপত্তি তামিলনাড়ুতে।" },
+                { question: "\"গুড়ি पड़वा\" মারাঠি হিন্দুদের জন্য ঐতিহ্যবাহী নববর্ষের সূচনা করে। এটি কোন হিন্দু মাসে পালিত হয়?", options: ["বৈশাখ", "ভাদ্র", "শ্রাবণ", "চৈত্র"], answer: 3, explanation: "গুড়ি पड़वा চৈত্র মাসের শুক্লপক্ষের প্রতিপদ তিথিতে পালিত হয়।" },
+                { question: "মঠের একটি মন্দিরে কুষাণ শাসকদের বিশাল মূর্তি পাওয়া গেছে। এটি কোন রাজ্যে অবস্থিত?", options: ["বিহার", "উত্তরপ্রদেশ", "মধ্যপ্রদেশ", "ওড়িশা"], answer: 1, explanation: "উত্তরপ্রদেশের মথুরার কাছে মাট (Mat) নামক স্থানে কুষাণ শাসকদের মূর্তি সম্বলিত একটি মন্দির পাওয়া গেছে।" },
+                { question: "জাপানের জাতীয় পোশাক কোনটি?", options: ["চাদর", "কিল্ট", "সারং", "কিমোনো"], answer: 3, explanation: "কিমোনো হল জাপানের একটি ঐতিহ্যবাহী এবং সুপরিচিত জাতীয় পোশাক।" },
+                { question: "থাঞ্জাভুরের কোন মন্দিরে চোল স্থাপত্য রয়েছে এবং এটি সম্রাট রাজরাজা নির্মাণ করেছিলেন?", options: ["বৃহদীশ্বর মন্দির", "নাগনাথস্বামী মন্দির", "তিরুমানঞ্জেরী মন্দির", "লর্ড মুরুগান মন্দির"], answer: 0, explanation: "বৃহদীশ্বর মন্দির, যা রাজরাজেশ্বরম নামেও পরিচিত, চোল সম্রাট প্রথম রাজরাজা নির্মাণ করেন।" },
+                { question: "ওয়াঙ্গালা উৎসব প্রধানত কোন রাজ্যে পালিত হয়?", options: ["মেঘালয়", "লাদাখ", "হিমাচল প্রদেশ", "উত্তরাখণ্ড"], answer: 0, explanation: "ওয়াঙ্গালা, যা 'একশ ড্রামের উৎসব' নামেও পরিচিত, মেঘালয়ের গারো উপজাতির একটি ফসল কাটার পরের উৎসব।" },
+                { question: "জাট-জাটিন নিচের কোন রাজ্যের অন্যতম জনপ্রিয় লোকনৃত্য?", options: ["মধ্যপ্রদেশ", "আসাম", "বিহার", "ছত্তিশগড়"], answer: 2, explanation: "জাট-জাটিন বিহারের, বিশেষ করে মিথিলা অঞ্চলের, একটি জনপ্রিয় লোকনৃত্য।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

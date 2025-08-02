@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ১২ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="Qset11.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset13.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 12 (প্রশ্ন ১১১-১২০)",
+            questions: [
+                { question: "খাজুরাহো নৃত্য উৎসব কত সালে প্রতিষ্ঠিত হয়েছিল?", options: ["2015", "2005", "1975", "1995"], answer: 2, explanation: "খাজুরাহো নৃত্য উৎসব ১৯৭৫ সালে শুরু হয়েছিল।" },
+                { question: "'জ্ঞান পঞ্চমী' জৈনরা কার্তিক মাসের কোন দিনে উদযাপন করে?", options: ["পঞ্চম", "প্রথম", "তৃতীয়", "নবম"], answer: 0, explanation: "জৈন পঞ্জিকা অনুসারে কার্তিক মাসের পঞ্চম দিনে জ্ঞান পঞ্চমী পালিত হয়।" },
+                { question: "নিচের কোনটি ভারতের একটি লোকনৃত্য নয়?", options: ["মোহিনীয়াট্টম", "লাবণী", "কালবেলিয়া", "রউফ"], answer: 0, explanation: "মোহিনীয়াট্টম কেরালার একটি শাস্ত্রীয় নৃত্য, লোকনৃত্য নয়।" },
+                { question: "বেলুড় মঠ কোথায় অবস্থিত?", options: ["পশ্চিমবঙ্গ", "মহারাষ্ট্র", "উত্তরপ্রদেশ", "তামিলনাড়ু"], answer: 0, explanation: "বেলুড় মঠ, রামকৃষ্ণ মিশনের সদর দফতর, পশ্চিমবঙ্গে অবস্থিত।" },
+                { question: "কর্ণাটকের কোন জেলায় মাস্কি প্রত্নতাত্ত্বিক স্থানটি অবস্থিত?", options: ["উড়ুপি", "یادگیر", "হাসান", "রায়চুর"], answer: 3, explanation: "মাস্কি কর্ণাটকের রায়চুর জেলায় অবস্থিত, যা অশোকের শিলালিপির জন্য পরিচিত।" },
+                { question: "সিংহলি নিচের কোন দেশের একটি প্রধান ভাষা?", options: ["মালয়েশিয়া", "ইন্দোনেশিয়া", "শ্রীলঙ্কা", "মায়ানমার"], answer: 2, explanation: "সিংহলি শ্রীলঙ্কার সরকারি ভাষা।" },
+                { question: "পোঙ্গলের উৎসবটি প্রধানত ভারতের কোন রাজ্যে পালিত হয়?", options: ["তামিলনাড়ু", "রাজস্থান", "মহারাষ্ট্র", "উত্তরপ্রদেশ"], answer: 0, explanation: "পোঙ্গল তামিলনাড়ুর একটি প্রধান ফসল কাটার উৎসব।" },
+                { question: "সেন্ট পিটার্স ব্যাসিলিকা কোন শহরে অবস্থিত?", options: ["মাদ্রিদ", "লিসবন", "পিসা", "ভ্যাটিকান সিটি"], answer: 3, explanation: "সেন্ট পিটার্স ব্যাসিলিকা ভ্যাটিকান সিটিতে অবস্থিত।" },
+                { question: "সবরিমালা মন্দির কোথায় অবস্থিত?", options: ["কেরালা", "অন্ধ্রপ্রদেশ", "মহারাষ্ট্র", "তামিলনাড়ু"], answer: 0, explanation: "সবরিমালা কেরালার একটি বিখ্যাত তীর্থস্থান।" },
+                { question: "কালিদাস তাঁর মেঘদূত কবিতাটি কোন ভাষায় লিখেছিলেন?", options: ["প্রাকৃত", "সংস্কৃত", "পালি", "হিন্দি"], answer: 1, explanation: "কালিদাস মেঘদূত সংস্কৃতে লিখেছিলেন।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ৭ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="Qset6.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset8.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 7 (প্রশ্ন ৬১-৭০)",
+            questions: [
+                { question: "নিচের কোনটি একটি শাস্ত্রীয় দ্রাবিড় ভাষা?", options: ["ওড়িয়া", "তামিল", "গুজরাটি", "বাংলা"], answer: 1, explanation: "তামিল একটি শাস্ত্রীয় দ্রাবিড় ভাষা।" },
+                { question: "শংকরদেব দ্বারা নির্মিত ভাওনায় ব্যবহৃত ঐতিহ্যবাহী ভাষা কোনটি?", options: ["মালায়ালাম", "সংস্কৃত", "ব্রজাবলী", "তামিল"], answer: 2, explanation: "ব্রজাবলী হল আসামে শ্রীমন্ত শংকরদেব দ্বারা তাঁর ভাওনা পরিবেশনার জন্য নির্মিত ভাষা।" },
+                { question: "তামিলনাড়ুর সবচেয়ে জনপ্রিয় লোকনৃত্য কোনটি?", options: ["কারাগাম", "কুড়িয়াত্তম", "যক্ষগান", "কথাকলি"], answer: 0, explanation: "কারাগাম তামিলনাড়ুর একটি জনপ্রিয় লোকনৃত্য।" },
+                { question: "নিচের কোন শহরটি আইকনিক 'কুম্ভ মেলা'-র জন্য বিখ্যাত?", options: ["আহমেদাবাদ", "সুরাট", "প্রয়াগরাজ", "লখনউ"], answer: 2, explanation: "প্রয়াগরাজ (এলাহাবাদ) হল প্রধান শহরগুলির মধ্যে একটি যেখানে কুম্ভ মেলা অনুষ্ঠিত হয়।" },
+                { question: "'নাগানন্দ' নামক সংস্কৃত নাটকটি কোন সম্রাটের রচনা বলে মনে করা হয়?", options: ["বিন্দুসার", "অশোক", "হর্ষ", "প্রথম চন্দ্রগুপ্ত"], answer: 2, explanation: "'নাগানন্দ' ৭ম শতাব্দীর সম্রাট হর্ষের লেখা একটি সংস্কৃত নাটক।" },
+                { question: "নবকলেবর উৎসব কোন রাজ্যের সাথে যুক্ত?", options: ["ওড়িশা", "আসাম", "সিকিম", "পশ্চিমবঙ্গ"], answer: 0, explanation: "নবকলেবর হল ওড়িশার পুরীর জগন্নাথ মন্দিরের সাথে যুক্ত একটি আচার।" },
+                { question: "গেটওয়ে অফ ইন্ডিয়া কোন স্থাপত্য শৈলীতে নির্মিত হয়েছিল?", options: ["পারস্য", "পশ্চিমা", "ইউরোপীয়", "ইন্দো-সারাসেনিক শৈলী"], answer: 3, explanation: "মুম্বাইয়ের গেটওয়ে অফ ইন্ডিয়া ইন্দো-সারাসেনিক স্থাপত্য শৈলীতে নির্মিত হয়েছিল।" },
+                { question: "কোন ভারতীয় রাজ্য মকর সংক্রান্তিকে 'পৌষ সংক্রান্তি' হিসেবে পালন করে?", options: ["মহারাষ্ট্র", "পশ্চিমবঙ্গ", "হিমাচল প্রদেশ", "রাজস্থান"], answer: 1, explanation: "পশ্চিমবঙ্গে মকর সংক্রান্তি পৌষ সংক্রান্তি হিসেবে পালিত হয়।" },
+                { question: "আল্লারাখা কুরেশি, যিনি জনপ্রিয়ভাবে আল্লা রাখা নামে পরিচিত, তিনি কোন বাদ্যযন্ত্রের বাদক?", options: ["বীণা", "ঢোলক", "তবলা", "সেতার"], answer: 2, explanation: "উস্তাদ আল্লা রাখা একজন কিংবদন্তী তবলা বাদক ছিলেন।" },
+                { question: "রাজা রবি वर्मा কোন ক্ষেত্রে বিখ্যাত ছিলেন?", options: ["নৃত্য", "সাহিত্য", "সংগীত", "চিত্রকলা"], answer: 3, explanation: "রাজা রবি वर्मा একজন প্রখ্যাত ভারতীয় চিত্রশিল্পী ছিলেন।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

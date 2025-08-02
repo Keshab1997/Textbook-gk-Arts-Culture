@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Title -->
+    <title>শিল্প ও সংস্কৃতি (ক্লাস ০৩) - Art & Culture (Class 03)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+        :root { --bg-color: #f0f2f5; --container-bg: #ffffff; --text-color: #333333; --heading-color-1: #d81b60; --heading-color-2: #004d40; --heading-color-3: #1a237e; --accent-color: #c2185b; --blockquote-bg: #e3f2fd; --blockquote-border: #2196f3; --table-header-bg: #004d40; --table-header-text: #ffffff; --nav-button-bg: #fff; --nav-button-text: #333; --nav-button-border: #ccc; --nav-active-bg: #d81b60; --box-shadow-color: rgba(0, 0, 0, 0.1); }
+        [data-theme="forest"] { --bg-color: #f0f4f0; --container-bg: #ffffff; --text-color: #2c3e50; --heading-color-1: #27ae60; --heading-color-2: #16a085; --heading-color-3: #2c3e50; --accent-color: #e67e22; --blockquote-bg: #e8f5e9; --blockquote-border: #27ae60; --table-header-bg: #27ae60; }
+        [data-theme="ocean"] { --bg-color: #eef5ff; --container-bg: #ffffff; --text-color: #34495e; --heading-color-1: #2980b9; --heading-color-2: #3498db; --heading-color-3: #1f618d; --accent-color: #e74c3c; --blockquote-bg: #e4f1fe; --blockquote-border: #3498db; --table-header-bg: #2980b9; }
+        [data-theme="sunset"] { --bg-color: #fff3e0; --container-bg: #ffffff; --text-color: #4e342e; --heading-color-1: #e65100; --heading-color-2: #f57c00; --heading-color-3: #d84315; --accent-color: #bf360c; --blockquote-bg: #fff8e1; --blockquote-border: #f57c00; --table-header-bg: #e65100; }
+        .dark-mode { --bg-color: #121212; --container-bg: #1e1e1e; --text-color: #e0e0e0; --heading-color-1: #bb86fc; --heading-color-2: #03dac6; --heading-color-3: #cf6679; --accent-color: #f48fb1; --blockquote-bg: #2a2a2a; --blockquote-border: #03dac6; --table-header-bg: #3700b3; --nav-button-bg: #2c2c2c; --nav-button-text: #e0e0e0; --nav-button-border: #555; --nav-active-bg: #bb86fc; --box-shadow-color: rgba(255, 255, 255, 0.05); }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Hind Siliguri', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; margin: 0; padding: 20px; transition: background-color 0.3s, color 0.3s; }
+        header { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px 0; }
+        .logo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 12px var(--box-shadow-color); }
+        .container { max-width: 900px; margin: 20px auto; background-color: var(--container-bg); padding: 30px 40px; border-radius: 12px; box-shadow: 0 4px 12px var(--box-shadow-color); transition: background-color 0.3s; }
+        h1, h2, h3, h4 { border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 30px; }
+        h1 { text-align: center; font-size: 2.2em; color: var(--heading-color-1); border-bottom: none; margin: 0; }
+        h2 { font-size: 2em; color: var(--heading-color-2); }
+        h3, h4 { font-size: 1.6em; color: var(--heading-color-3); }
+        p { font-size: 1.1em; }
+        strong { color: var(--accent-color); }
+        blockquote { background-color: var(--blockquote-bg); border-left: 5px solid var(--blockquote-border); margin: 20px 0; padding: 15px 20px; font-size: 1.1em; border-radius: 5px; }
+        .mcq-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #ddd; }
+        .mcq-item:last-child { border-bottom: none; }
+        .mcq-item ul { list-style-type: none; padding-left: 0; }
+        .mcq-item li { margin-bottom: 8px; }
+        .controls-wrapper { max-width: 900px; margin: 20px auto; padding: 15px; background-color: var(--container-bg); border-radius: 10px; box-shadow: 0 4px 12px var(--box-shadow-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .theme-buttons button, #langToggleBtn { padding: 8px 15px; border: 1px solid var(--nav-button-border); background-color: var(--nav-button-bg); color: var(--nav-button-text); border-radius: 5px; cursor: pointer; font-family: 'Hind Siliguri', sans-serif; font-weight: 600; transition: all 0.2s; }
+        .theme-buttons button:hover, #langToggleBtn:hover { opacity: 0.8; }
+        .dark-mode-toggle { display: flex; align-items: center; gap: 10px; }
+        .switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: var(--heading-color-1); }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .navigation { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .nav-button { display: inline-block; padding: 10px 15px; border: 1px solid var(--nav-button-border); border-radius: 5px; text-decoration: none; color: var(--nav-button-text); background-color: var(--nav-button-bg); transition: background-color 0.3s, color 0.3s; font-weight: 500; }
+        .nav-button:hover { background-color: #e0e0e0; }
+        .nav-button.active { background-color: var(--nav-active-bg); color: white; border-color: var(--nav-active-bg); }
+        .nav-button.disabled { pointer-events: none; opacity: 0.5; }
+        .home-button { background-color: #1e88e5; color: white; border-color: #1e88e5; }
+        .home-button:hover { background-color: #1565c0; }
+        footer { text-align: center; margin-top: 40px; padding: 20px; font-size: 0.9em; color: var(--text-color); opacity: 0.8; }
+        .scroll-button { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background-color: var(--heading-color-1); color: white; border: none; font-size: 24px; cursor: pointer; display: none; justify-content: center; align-items: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; transition: opacity 0.3s, visibility 0.3s; }
+        #scrollToBottomBtn { bottom: 80px; background-color: var(--heading-color-2); }
+        .scroll-button:hover { opacity: 0.8; }
+        .lang-en, .lang-bn { display: inline; }
+    </style>
+</head>
+<body data-theme="default">
+
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>
+            <span class="lang-bn">শিল্প ও সংস্কৃতি</span>
+            <span class="lang-en">ART AND CULTURE</span>
+        </h1>
+    </header>
+
+    <div class="controls-wrapper">
+        <div class="theme-buttons">
+            <button data-theme-name="default">Default</button>
+            <button data-theme-name="forest">Forest</button>
+            <button data-theme-name="ocean">Ocean</button>
+            <button data-theme-name="sunset">Sunset</button>
+        </div>
+        <button id="langToggleBtn">বাংলা / English</button>
+        <div class="dark-mode-toggle">
+            <span>দিন/রাত</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Updated Heading -->
+        <h2>
+            <span class="lang-bn">ক্লাস: ০৩</span>
+            <span class="lang-en">CLASS: 03</span>
+        </h2>
+        <h3>
+            <span class="lang-bn">বিগত বছরের পরীক্ষার প্রশ্নাবলী</span>
+            <span class="lang-en">Previous Year's Exam Questions</span>
+        </h3>
+
+        <!-- All New Questions for Class 3 Start Here -->
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫২. শোগাৎসু নিচের কোন দেশের নববর্ষ উৎসব?</span>
+                <span class="lang-en">52. Shogatsu is the New Year festival of which of the following country?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ব্রাজিল</span><span class="lang-en">Brazil</span></li>
+                <li>(B) <span class="lang-bn">নিউজিল্যান্ড</span><span class="lang-en">New Zealand</span></li>
+                <li>(C) <span class="lang-bn">জাপান</span><span class="lang-en">Japan</span></li>
+                <li>(D) <span class="lang-bn">ফ্রান্স</span><span class="lang-en">France</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) জাপান</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> শোগাৎসু হল জাপানের নববর্ষ উৎসব, যা বিভিন্ন ঐতিহ্যবাহী প্রথার সাথে উদযাপিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Shogatsu is the Japanese New Year festival, celebrated with various traditional customs.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৩. ভারতের কোন রাজ্য নভেম্বরে 'সাঙ্গাই উৎসব' পালন করে?</span>
+                <span class="lang-en">53. Which state of India celebrates the 'Sangai Festival' in November?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">গুজরাট</span><span class="lang-en">Gujarat</span></li>
+                <li>(B) <span class="lang-bn">আসাম</span><span class="lang-en">Assam</span></li>
+                <li>(C) <span class="lang-bn">মণিপুর</span><span class="lang-en">Manipur</span></li>
+                <li>(D) <span class="lang-bn">তামিলনাড়ু</span><span class="lang-en">Tamil Nadu</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) মণিপুর</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> সাঙ্গাই উৎসব মণিপুরে পর্যটন প্রচার এবং রাজ্যের সংস্কৃতি প্রদর্শনের জন্য অনুষ্ঠিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> The Sangai Festival is held in Manipur to promote tourism and showcase the culture of the state.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৪. কোন ঐতিহ্যবাহী রঙ-আঁকা আলংকারিক এবং নকশাযুক্ত পোশাক ২০২১ সালে ভৌগোলিক ইঙ্গিত (GI) ট্যাগ পেয়েছে?</span>
+                <span class="lang-en">54. Which traditional dye-painted figurative and patterned garment received the Geographical Indication (GI) tag in 2021?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">থাংকা চিত্রকলা</span><span class="lang-en">Thanka painting</span></li>
+                <li>(B) <span class="lang-bn">কারুপ্পুর কলমকারি চিত্রকলা</span><span class="lang-en">Karuppur Kalamkari Painting</span></li>
+                <li>(C) <span class="lang-bn">পটচিত্র চিত্রকলা</span><span class="lang-en">Pattachitra painting</span></li>
+                <li>(D) <span class="lang-bn">মিথিলা চিত্রকলা</span><span class="lang-en">Mithila Painting</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) কারুপ্পুর কলমকারি চিত্রকলা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> তামিলনাড়ুর কারুপ্পুর কলমকারি চিত্রকলা তার অনন্য রঙ-আঁকা নকশার জন্য ২০২১ সালে GI ট্যাগ পেয়েছে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Karuppur Kalamkari Painting from Tamil Nadu received the GI tag in 2021 for its unique dye-painted designs.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৫. মধ্যপ্রদেশের বিশ্ব ঐতিহ্যবাহী স্থান ভীমবেটকা কিসের জন্য বিখ্যাত?</span>
+                <span class="lang-en">55. The World Heritage Site Bhimbetka in MP is famous for</span>
+            </h4>
+            <p><em>[RRB NTPC 2016]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">বন</span><span class="lang-en">Forests</span></li>
+                <li>(B) <span class="lang-bn">পর্বতমালা</span><span class="lang-en">Mountain ranges</span></li>
+                <li>(C) <span class="lang-bn">শিলা আশ্রয়</span><span class="lang-en">Rock shelters</span></li>
+                <li>(D) <span class="lang-bn">জলপ্রপাত</span><span class="lang-en">Waterfalls</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) শিলা আশ্রয়</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ভীমবেটকা তার প্রাগৈতিহাসিক শিলা আশ্রয় এবং গুহাচিত্রের জন্য বিখ্যাত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Bhimbetka is famous for its prehistoric rock shelters and cave paintings.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৬. নিচের কোনটি একটি নৃতত্ত্ব জাদুঘর যা ভারতের বিশেষ প্রেক্ষাপটে মানুষ এবং সংস্কৃতির বিবর্তনের একটি সমন্বিত গল্প উপস্থাপন করে?</span>
+                <span class="lang-en">56. Which of the following is an anthropology museum that presents an integrated story of the evolution of man and culture with special reference to India?</span>
+            </h4>
+            <p><em>[RRB ALP 2018]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ইন্দিরা গান্ধী সংগ্রহালয় (IGS)</span><span class="lang-en">The Indira Gandhi Sangrahalaya (IGS)</span></li>
+                <li>(B) <span class="lang-bn">ইন্দিরা গান্ধী জন্তু সংগ্রহালয় (IGJS)</span><span class="lang-en">The Indira Gandhi Jantu Sangrahalaya (IGJS)</span></li>
+                <li>(C) <span class="lang-bn">ইন্দিরা গান্ধী রাষ্ট্রীয় মানব সংগ্রহালয় (IGRMS)</span><span class="lang-en">The Indira Gandhi Rashtriya Manav Sangrahalaya (IGRMS)</span></li>
+                <li>(D) <span class="lang-bn">ইন্দিরা গান্ধী পুস্তক সংগ্রহালয় (IGPS)</span><span class="lang-en">The Indira Gandhi Pustak Sangrahalaya (IGPS)</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) ইন্দিরা গান্ধী রাষ্ট্রীয় মানব সংগ্রহালয় (IGRMS)</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ভোপালের IGRMS একটি নৃতত্ত্ব জাদুঘর যা মানব বিবর্তন এবং সংস্কৃতির উপর কেন্দ্র করে তৈরি।</span>
+                <span class="lang-en"><strong>Explanation:</strong> IGRMS in Bhopal is an anthropology museum focusing on human evolution and culture.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৭. ______ ভারতের বৃহত্তম প্রাসাদগুলির মধ্যে একটি, যা 'আম্বা ভিলা' নামেও পরিচিত এবং এটি ওয়াদিয়ার রাজবংশের বাসস্থান ছিল।</span>
+                <span class="lang-en">57. ______ is one of India's largest palaces, also known as 'Amba Villa' and was the residence of the Wodeyar monarch.</span>
+            </h4>
+            <p><em>[RRB NTPC 2016]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মহীশূর প্রাসাদ</span><span class="lang-en">Mysore Palace</span></li>
+                <li>(B) <span class="lang-bn">লেহ প্রাসাদ</span><span class="lang-en">Leh Palace</span></li>
+                <li>(C) <span class="lang-bn">মাত্তানচেরি প্রাসাদ</span><span class="lang-en">Mattancherry Palace</span></li>
+                <li>(D) <span class="lang-bn">হাম্পি</span><span class="lang-en">Hampi</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) মহীশূর প্রাসাদ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> মহীশূর প্রাসাদ, যা আম্বা ভিলাস প্রাসাদ নামেও পরিচিত, কর্ণাটকের একটি ঐতিহাসিক প্রাসাদ।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Mysore Palace, also called Amba Vilas Palace, is a historical palace in Karnataka.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৮. নবী মুহাম্মদের মৃত্যুর পর তাঁর অনুসারীদের দ্বারা সংকলিত তাঁর বাণী বা দৈনন্দিন শিক্ষাকে কী বলা হয়?</span>
+                <span class="lang-en">58. The sayings or day-to-day teachings of Prophet Muhammad after his death were compiled by his followers and called</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">হাদিস</span><span class="lang-en">Hadith</span></li>
+                <li>(B) <span class="lang-bn">সুন্নাহ</span><span class="lang-en">Sunnah</span></li>
+                <li>(C) <span class="lang-bn">কুরআন</span><span class="lang-en">Quran</span></li>
+                <li>(D) <span class="lang-bn">শরিয়া</span><span class="lang-en">Sharia</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) হাদিস</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> হাদিস হল নবী মুহাম্মদের নথিভুক্ত বাণী এবং কার্যকলাপ, যা তাঁর মৃত্যুর পর সংকলিত হয়েছিল।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Hadith are the recorded sayings and actions of Prophet Muhammad, compiled after his death.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫৯. নিচের কোন নৃত্যটি জম্মু ও কাশ্মীর রাজ্যের অন্তর্গত?</span>
+                <span class="lang-en">59. Which of the following dance forms belongs to the state of Jammu and Kashmir?</span>
+            </h4>
+            <p><em>[RRB ALP 2019]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">রউফ</span><span class="lang-en">Rouf</span></li>
+                <li>(B) <span class="lang-bn">বিদেশিয়া</span><span class="lang-en">Bidesia</span></li>
+                <li>(C) <span class="lang-bn">কর্মা</span><span class="lang-en">Karma</span></li>
+                <li>(D) <span class="lang-bn">সোয়াং</span><span class="lang-en">Swang</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) রউফ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> রউফ জম্মু ও কাশ্মীরের একটি ঐতিহ্যবাহী লোকনৃত্য, যা মহিলারা পরিবেশন করেন।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Rouf is a traditional folk dance of Jammu and Kashmir, performed by women.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬০. কথাকলি শাস্ত্রীয় নৃত্যটি কোন ভারতীয় রাজ্যের অন্তর্গত?</span>
+                <span class="lang-en">60. The classical dance of Kathakali belongs to which Indian state?</span>
+            </h4>
+            <p><em>[RRB JE 2019]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ওড়িশা</span><span class="lang-en">Odisha</span></li>
+                <li>(B) <span class="lang-bn">কেরালা</span><span class="lang-en">Kerala</span></li>
+                <li>(C) <span class="lang-bn">অন্ধ্রপ্রদেশ</span><span class="lang-en">Andhra Pradesh</span></li>
+                <li>(D) <span class="lang-bn">আসাম</span><span class="lang-en">Assam</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) কেরালা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> কথাকলি কেরালার একটি শাস্ত্রীয় নৃত্য-নাট্য, যা তার বিস্তৃত পোশাক এবং মেকআপের জন্য পরিচিত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Kathakali is a classical dance-drama from Kerala, known for its elaborate costumes and makeup.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬১. নিচের কোনটি একটি শাস্ত্রীয় দ্রাবিড় ভাষা?</span>
+                <span class="lang-en">61. Which of the following is a classical Dravidian language?</span>
+            </h4>
+            <p><em>[RRB NTPC 2016]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ওড়িয়া</span><span class="lang-en">Odia</span></li>
+                <li>(B) <span class="lang-bn">তামিল</span><span class="lang-en">Tamil</span></li>
+                <li>(C) <span class="lang-bn">গুজরাটি</span><span class="lang-en">Gujarati</span></li>
+                <li>(D) <span class="lang-bn">বাংলা</span><span class="lang-en">Bengali</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) তামিল</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> তামিল একটি শাস্ত্রীয় দ্রাবিড় ভাষা, যা প্রধানত তামিলনাড়ু এবং শ্রীলঙ্কায় বলা হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Tamil is a classical Dravidian language, spoken mainly in Tamil Nadu and Sri Lanka.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬২. শংকরদেব দ্বারা নির্মিত ভাওনায় ব্যবহৃত ঐতিহ্যবাহী ভাষা কোনটি?</span>
+                <span class="lang-en">62. What is the traditional language used in Bhaona which was created by Sankardeva?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মালায়ালাম</span><span class="lang-en">Malayalam</span></li>
+                <li>(B) <span class="lang-bn">সংস্কৃত</span><span class="lang-en">Sanskrit</span></li>
+                <li>(C) <span class="lang-bn">ব্রজাবলী</span><span class="lang-en">Brajawali</span></li>
+                <li>(D) <span class="lang-bn">তামিল</span><span class="lang-en">Tamil</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) ব্রজাবলী</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ব্রজাবলী হল আসামে শ্রীমন্ত শংকরদেব দ্বারা তাঁর ভাওনা পরিবেশনার জন্য নির্মিত ভাষা।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Brajawali is the language created by Srimanta Sankardeva for his Bhaona performances in Assam.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৩. তামিলনাড়ুর সবচেয়ে জনপ্রিয় লোকনৃত্য কোনটি?</span>
+                <span class="lang-en">63. The most popular folk dance of Tamil Nadu</span>
+            </h4>
+            <p><em>[RRB ALP 2018]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">কারাগাম</span><span class="lang-en">Karagam</span></li>
+                <li>(B) <span class="lang-bn">কুড়িয়াত্তম</span><span class="lang-en">Koodiyattam</span></li>
+                <li>(C) <span class="lang-bn">যক্ষগান</span><span class="lang-en">Yakshagana</span></li>
+                <li>(D) <span class="lang-bn">কথাকলি</span><span class="lang-en">Kathakali</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) কারাগাম</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> কারাগাম তামিলনাড়ুর একটি জনপ্রিয় লোকনৃত্য, যা মাথায় কলস ভারসাম্য রেখে পরিবেশন করা হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Karagam is a popular folk dance of Tamil Nadu, performed balancing pots on the head.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৪. নিচের কোন শহরটি আইকনিক 'কুম্ভ মেলা'-র জন্য বিখ্যাত?</span>
+                <span class="lang-en">64. Which of the following cities is famous for the iconic 'Kumbh Mela'?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">আহমেদাবাদ</span><span class="lang-en">Ahmedabad</span></li>
+                <li>(B) <span class="lang-bn">সুরাট</span><span class="lang-en">Surat</span></li>
+                <li>(C) <span class="lang-bn">প্রয়াগরাজ</span><span class="lang-en">Prayagraj</span></li>
+                <li>(D) <span class="lang-bn">লখনউ</span><span class="lang-en">Lucknow</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) প্রয়াগরাজ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> প্রয়াগরাজ (এলাহাবাদ) হল প্রধান শহরগুলির মধ্যে একটি যেখানে কুম্ভ মেলা অনুষ্ঠিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Prayagraj (Allahabad) is one of the main cities where the Kumbh Mela is held.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৫. 'নাগানন্দ', একটি সংস্কৃত নাটক যা নাগদের বাঁচাতে বিদ্যাধর রাজা জিমূতবাহনের আত্মত্যাগের জনপ্রিয় কাহিনী বলে, এটি কোন সম্রাটের রচনা বলে মনে করা হয়?</span>
+                <span class="lang-en">65. Nagananda, a Sanskrit play which tells the popular story of Vidyadhar King Jimutavahana's self-sacrifice to save the Nagas, is attributed to emperor</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">বিন্দুসার</span><span class="lang-en">Bindusara</span></li>
+                <li>(B) <span class="lang-bn">অশোক</span><span class="lang-en">Ashoka</span></li>
+                <li>(C) <span class="lang-bn">হর্ষ</span><span class="lang-en">Harsha</span></li>
+                <li>(D) <span class="lang-bn">প্রথম চন্দ্রগুপ্ত</span><span class="lang-en">Chandra Gupta I</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) হর্ষ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> 'নাগানন্দ' ৭ম শতাব্দীর সম্রাট হর্ষের লেখা একটি সংস্কৃত নাটক বলে মনে করা হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Nagananda is a Sanskrit drama attributed to Emperor Harsha of the 7th century.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৬. নবকলেবর উৎসব কোন রাজ্যের সাথে যুক্ত?</span>
+                <span class="lang-en">66. With which state is the Nabakalebara festival associated?</span>
+            </h4>
+            <p><em>[RRB NTPC 2021]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ওড়িশা</span><span class="lang-en">Odisha</span></li>
+                <li>(B) <span class="lang-bn">আসাম</span><span class="lang-en">Assam</span></li>
+                <li>(C) <span class="lang-bn">সিকিম</span><span class="lang-en">Sikkim</span></li>
+                <li>(D) <span class="lang-bn">পশ্চিমবঙ্গ</span><span class="lang-en">West Bengal</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) ওড়িশা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> নবকলেবর হল ওড়িশার পুরীর জগন্নাথ মন্দিরের সাথে যুক্ত একটি আচার।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Nabakalebara is a ritual associated with the Jagannath Temple in Puri, Odisha.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৭. গেটওয়ে অফ ইন্ডিয়া ১৯১১ সালে রাজা পঞ্চম জর্জ এবং রানী মেরিকে ভারতে স্বাগত জানাতে ঐতিহ্যবাহী ______ শৈলীতে নির্মিত হয়েছিল।</span>
+                <span class="lang-en">67. The Gateway of India was built in the traditional ______ style to welcome King George V and Queen Mary to India in 1911.</span>
+            </h4>
+            <p><em>[RRB NTPC 2021]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">পারস্য</span><span class="lang-en">Persian</span></li>
+                <li>(B) <span class="lang-bn">পশ্চিমা</span><span class="lang-en">Western</span></li>
+                <li>(C) <span class="lang-bn">ইউরোপীয়</span><span class="lang-en">European</span></li>
+                <li>(D) <span class="lang-bn">ইন্দো-সারাসেনিক শৈলী</span><span class="lang-en">Indo-Saracenic style</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (D) ইন্দো-সারাসেনিক শৈলী</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> মুম্বাইয়ের গেটওয়ে অফ ইন্ডিয়া ইন্দো-সারাসেনিক স্থাপত্য শৈলীতে নির্মিত হয়েছিল।</span>
+                <span class="lang-en"><strong>Explanation:</strong> The Gateway of India in Mumbai was built in the Indo-Saracenic architectural style.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৮. কোন ভারতীয় রাজ্য মকর সংক্রান্তিকে 'পৌষ সংক্রান্তি' হিসেবে পালন করে?</span>
+                <span class="lang-en">68. Which Indian state celebrates Makar Sankranti as 'Poush Sankranti'?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মহারাষ্ট্র</span><span class="lang-en">Maharashtra</span></li>
+                <li>(B) <span class="lang-bn">পশ্চিমবঙ্গ</span><span class="lang-en">West Bengal</span></li>
+                <li>(C) <span class="lang-bn">হিমাচল প্রদেশ</span><span class="lang-en">Himachal Pradesh</span></li>
+                <li>(D) <span class="lang-bn">রাজস্থান</span><span class="lang-en">Rajasthan</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) পশ্চিমবঙ্গ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> পশ্চিমবঙ্গে মকর সংক্রান্তি পৌষ সংক্রান্তি হিসেবে পালিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> In West Bengal, Makar Sankranti is celebrated as Poush Sankranti.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৬৯. আল্লারাখা কুরেশি, যিনি জনপ্রিয়ভাবে আল্লা রাখা নামে পরিচিত, তিনি একজন ভারতীয় ______ বাদক।</span>
+                <span class="lang-en">69. Allarakha Qureshi who is popularly known as Alla Rakha, is an Indian ______ player.</span>
+            </h4>
+            <p><em>[RRB NTPC 2016]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">বীণা</span><span class="lang-en">Veena</span></li>
+                <li>(B) <span class="lang-bn">ঢোলক</span><span class="lang-en">Dholak</span></li>
+                <li>(C) <span class="lang-bn">তবলা</span><span class="lang-en">Tabla</span></li>
+                <li>(D) <span class="lang-bn">সেতার</span><span class="lang-en">Sitar</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) তবলা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> উস্তাদ আল্লা রাখা একজন কিংবদন্তী তবলা বাদক ছিলেন, যিনি রবি শঙ্করের সাথে তার সহযোগিতার জন্য পরিচিত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Ustad Alla Rakha was a legendary tabla player, known for his collaboration with Ravi Shankar.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৭০. রাজা রবি वर्मा কোন ক্ষেত্রে বিখ্যাত ছিলেন?</span>
+                <span class="lang-en">70. Raja Ravi Varma was famous in the field of</span>
+            </h4>
+            <p><em>[RRB JE 2019]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">নৃত্য</span><span class="lang-en">Dance</span></li>
+                <li>(B) <span class="lang-bn">সাহিত্য</span><span class="lang-en">Literature</span></li>
+                <li>(C) <span class="lang-bn">সংগীত</span><span class="lang-en">Music</span></li>
+                <li>(D) <span class="lang-bn">চিত্রকলা</span><span class="lang-en">Painting</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (D) চিত্রকলা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> রাজা রবি वर्मा একজন প্রখ্যাত ভারতীয় চিত্রশিল্পী ছিলেন, যিনি ভারতীয় পৌরাণিক চরিত্রের বাস্তবসম্মত চিত্রায়নের জন্য বিখ্যাত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Raja Ravi Varma was a renowned Indian painter, famous for his realistic portrayal of Indian mythological characters.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৭১. গুণাঢ্যের ______ পৈশাচী ভাষায় লেখা।</span>
+                <span class="lang-en">71. The ______ of Gunadhya is written in the Paisachi language.</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মৃচ্ছকটিক</span><span class="lang-en">Mrichchhakatika</span></li>
+                <li>(B) <span class="lang-bn">পঞ্চতন্ত্র</span><span class="lang-en">Panchatantra</span></li>
+                <li>(C) <span class="lang-bn">বৃহৎকথা</span><span class="lang-en">Brihatkatha</span></li>
+                <li>(D) <span class="lang-bn">কথাসরিৎসাগর</span><span class="lang-en">Kathasaritsagara</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) বৃহৎকথা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> গুণাঢ্য রচিত বৃহৎকথা পৈশাচী ভাষায় লেখা একটি প্রাচীন ভারতীয় মহাকাব্য।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Brihatkatha, written by Gunadhya, is an ancient Indian epic in the Paisachi language.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৭২. ১৫ই আগস্ট প্রধানমন্ত্রী কোথা থেকে জাতির উদ্দেশে ভাষণ দেন?</span>
+                <span class="lang-en">72. From where does the Prime Minister address the nation on the 15th of August?</span>
+            </h4>
+            <p><em>[RRB JE 2019]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">সংসদ</span><span class="lang-en">Parliament</span></li>
+                <li>(B) <span class="lang-bn">চাঁদনী চক</span><span class="lang-en">Chandni Chowk</span></li>
+                <li>(C) <span class="lang-bn">লাল কেল্লা</span><span class="lang-en">Red Fort</span></li>
+                <li>(D) <span class="lang-bn">আলিবাগ</span><span class="lang-en">Alibag</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) লাল কেল্লা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ভারতের প্রধানমন্ত্রী স্বাধীনতা দিবসে (১৫ই আগস্ট) লাল কেল্লা থেকে জাতির উদ্দেশে ভাষণ দেন।</span>
+                <span class="lang-en"><strong>Explanation:</strong> The Prime Minister of India addresses the nation from the Red Fort on Independence Day (15th August).</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৭৩. মধ্যপ্রদেশের কোন শহরে কুম্ভ মেলা অনুষ্ঠিত হয়?</span>
+                <span class="lang-en">73. Kumbh Mela takes place in which of these cities of Madhya Pradesh?</span>
+            </h4>
+            <p><em>[RRB NTPC 2016]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">গোয়ালিয়র</span><span class="lang-en">Gwalior</span></li>
+                <li>(B) <span class="lang-bn">ভোপাল</span><span class="lang-en">Bhopal</span></li>
+                <li>(C) <span class="lang-bn">উজ্জয়িনী</span><span class="lang-en">Ujjain</span></li>
+                <li>(D) <span class="lang-bn">ইন্দোর</span><span class="lang-en">Indore</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) উজ্জয়িনী</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> উজ্জয়িনী মধ্যপ্রদেশের সেই শহর যেখানে কুম্ভ মেলা (সিংহস্থ) অনুষ্ঠিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Ujjain is the city in Madhya Pradesh where the Kumbh Mela (Simhastha) is held.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৭৪. কৃষ্ণানাট্টম নিচের কোন রাজ্যের একটি বিখ্যাত নৃত্য?</span>
+                <span class="lang-en">74. Krishnanattam is a famous dance of which of the following states?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">অন্ধ্রপ্রদেশ</span><span class="lang-en">Andhra Pradesh</span></li>
+                <li>(B) <span class="lang-bn">কর্ণাটক</span><span class="lang-en">Karnataka</span></li>
+                <li>(C) <span class="lang-bn">কেরালা</span><span class="lang-en">Kerala</span></li>
+                <li>(D) <span class="lang-bn">তামিলনাড়ু</span><span class="lang-en">Tamil Nadu</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) কেরালা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> কৃষ্ণানাট্টম কেরালার একটি ঐতিহ্যবাহী নৃত্য-নাট্য, যা ভগবান কৃষ্ণের জীবনকে চিত্রিত করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Krishnanattam is a traditional dance-drama from Kerala, depicting the life of Lord Krishna.</span>
+            </blockquote>
+        </div>
+        
+        <h2>ধন্যবাদ</h2>
+    </div>
+
+    <!-- Updated Navigation Bar for Class 3 -->
+    <nav class="navigation">
+        <a href="class2.html" class="nav-button">পূর্ববর্তী</a>
+        <a href="class1.html" class="nav-button">1</a>
+        <a href="class2.html" class="nav-button">2</a>
+        <a href="class3.html" class="nav-button active">3</a>
+        <a href="class4.html" class="nav-button">4</a>
+        <a href="class5.html" class="nav-button">5</a>
+        <a href="class6.html" class="nav-button">6</a>
+        <a href="class7.html" class="nav-button">7</a>
+        <a href="class4.html" class="nav-button">পরবর্তী</a>
+        <a href="../index.html" class="nav-button home-button">Home</a>
+    </nav>
+    
+    <footer>
+        <p>কপিরাইট © 2024 - সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>ডিজাইন ও ডেভেলপমেন্ট: <strong>কেশব সরকার</strong></p>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-button" title="উপরে যান">↑</button>
+    <button id="scrollToBottomBtn" class="scroll-button" title="নিচে যান">↓</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language Toggle Functionality
+            const langToggleButton = document.getElementById('langToggleBtn');
+            const allBengaliElements = document.querySelectorAll('.lang-bn');
+            const allEnglishElements = document.querySelectorAll('.lang-en');
+
+            function setLanguage(lang) {
+                if (lang === 'en') {
+                    allBengaliElements.forEach(el => el.style.display = 'none');
+                    allEnglishElements.forEach(el => el.style.display = 'inline');
+                    document.documentElement.lang = 'en';
+                } else {
+                    allEnglishElements.forEach(el => el.style.display = 'none');
+                    allBengaliElements.forEach(el => el.style.display = 'inline');
+                    document.documentElement.lang = 'bn';
+                }
+                localStorage.setItem('selected_language', lang);
+            }
+
+            langToggleButton.addEventListener('click', () => {
+                const currentLang = localStorage.getItem('selected_language') || 'bn';
+                const newLang = currentLang === 'bn' ? 'en' : 'bn';
+                setLanguage(newLang);
+            });
+
+            const savedLang = localStorage.getItem('selected_language') || 'bn';
+            setLanguage(savedLang);
+
+            // Theme and Dark Mode functionality
+            const themeButtons = document.querySelectorAll('.theme-buttons button');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            function applyTheme(theme) { body.dataset.theme = theme; localStorage.setItem('selected_theme', theme); }
+            function applyMode(mode) { if (mode === 'dark') { body.classList.add('dark-mode'); darkModeToggle.checked = true; } else { body.classList.remove('dark-mode'); darkModeToggle.checked = false; } localStorage.setItem('selected_mode', mode); }
+            const savedTheme = localStorage.getItem('selected_theme');
+            const savedMode = localStorage.getItem('selected_mode');
+            if (savedTheme) applyTheme(savedTheme);
+            if (savedMode) applyMode(savedMode);
+            themeButtons.forEach(button => { button.addEventListener('click', () => { applyTheme(button.dataset.themeName); }); });
+            darkModeToggle.addEventListener('change', () => { applyMode(darkModeToggle.checked ? 'dark' : 'light'); });
+
+            // Scroll buttons functionality
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            const scrollToBottomBtn = document.getElementById('scrollToBottomBtn');
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const bodyHeight = document.body.offsetHeight;
+                if (scrollPosition > 200) { scrollToTopBtn.style.display = 'flex'; } else { scrollToTopBtn.style.display = 'none'; }
+                if (scrollPosition + windowHeight < bodyHeight - 100) { scrollToBottomBtn.style.display = 'flex'; } else { scrollToBottomBtn.style.display = 'none'; }
+            });
+            scrollToTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            scrollToBottomBtn.addEventListener('click', () => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); });
+            
+            // Auto-scroll with Spacebar
+            let isAutoScrolling = false;
+            let scrollInterval;
+            const scrollSpeed = 1; 
+            const scrollDelay = 15; 
+
+            window.addEventListener('keydown', (event) => {
+                if (event.key === ' ') {
+                    event.preventDefault(); 
+                    if (isAutoScrolling) {
+                        clearInterval(scrollInterval);
+                        isAutoScrolling = false;
+                    } else {
+                        isAutoScrolling = true;
+                        scrollInterval = setInterval(() => {
+                            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                                clearInterval(scrollInterval);
+                                isAutoScrolling = false;
+                            } else {
+                                window.scrollBy(0, scrollSpeed);
+                            }
+                        }, scrollDelay);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

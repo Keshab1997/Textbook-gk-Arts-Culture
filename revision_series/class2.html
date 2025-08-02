@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Title -->
+    <title>শিল্প ও সংস্কৃতি (ক্লাস ০২) - Art & Culture (Class 02)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+        :root { --bg-color: #f0f2f5; --container-bg: #ffffff; --text-color: #333333; --heading-color-1: #d81b60; --heading-color-2: #004d40; --heading-color-3: #1a237e; --accent-color: #c2185b; --blockquote-bg: #e3f2fd; --blockquote-border: #2196f3; --table-header-bg: #004d40; --table-header-text: #ffffff; --nav-button-bg: #fff; --nav-button-text: #333; --nav-button-border: #ccc; --nav-active-bg: #d81b60; --box-shadow-color: rgba(0, 0, 0, 0.1); }
+        [data-theme="forest"] { --bg-color: #f0f4f0; --container-bg: #ffffff; --text-color: #2c3e50; --heading-color-1: #27ae60; --heading-color-2: #16a085; --heading-color-3: #2c3e50; --accent-color: #e67e22; --blockquote-bg: #e8f5e9; --blockquote-border: #27ae60; --table-header-bg: #27ae60; }
+        [data-theme="ocean"] { --bg-color: #eef5ff; --container-bg: #ffffff; --text-color: #34495e; --heading-color-1: #2980b9; --heading-color-2: #3498db; --heading-color-3: #1f618d; --accent-color: #e74c3c; --blockquote-bg: #e4f1fe; --blockquote-border: #3498db; --table-header-bg: #2980b9; }
+        [data-theme="sunset"] { --bg-color: #fff3e0; --container-bg: #ffffff; --text-color: #4e342e; --heading-color-1: #e65100; --heading-color-2: #f57c00; --heading-color-3: #d84315; --accent-color: #bf360c; --blockquote-bg: #fff8e1; --blockquote-border: #f57c00; --table-header-bg: #e65100; }
+        .dark-mode { --bg-color: #121212; --container-bg: #1e1e1e; --text-color: #e0e0e0; --heading-color-1: #bb86fc; --heading-color-2: #03dac6; --heading-color-3: #cf6679; --accent-color: #f48fb1; --blockquote-bg: #2a2a2a; --blockquote-border: #03dac6; --table-header-bg: #3700b3; --nav-button-bg: #2c2c2c; --nav-button-text: #e0e0e0; --nav-button-border: #555; --nav-active-bg: #bb86fc; --box-shadow-color: rgba(255, 255, 255, 0.05); }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Hind Siliguri', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; margin: 0; padding: 20px; transition: background-color 0.3s, color 0.3s; }
+        header { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px 0; }
+        .logo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 12px var(--box-shadow-color); }
+        .container { max-width: 900px; margin: 20px auto; background-color: var(--container-bg); padding: 30px 40px; border-radius: 12px; box-shadow: 0 4px 12px var(--box-shadow-color); transition: background-color 0.3s; }
+        h1, h2, h3, h4 { border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; margin-top: 30px; }
+        h1 { text-align: center; font-size: 2.2em; color: var(--heading-color-1); border-bottom: none; margin: 0; }
+        h2 { font-size: 2em; color: var(--heading-color-2); }
+        h3, h4 { font-size: 1.6em; color: var(--heading-color-3); }
+        p { font-size: 1.1em; }
+        strong { color: var(--accent-color); }
+        blockquote { background-color: var(--blockquote-bg); border-left: 5px solid var(--blockquote-border); margin: 20px 0; padding: 15px 20px; font-size: 1.1em; border-radius: 5px; }
+        .mcq-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #ddd; }
+        .mcq-item:last-child { border-bottom: none; }
+        .mcq-item ul { list-style-type: none; padding-left: 0; }
+        .mcq-item li { margin-bottom: 8px; }
+        .controls-wrapper { max-width: 900px; margin: 20px auto; padding: 15px; background-color: var(--container-bg); border-radius: 10px; box-shadow: 0 4px 12px var(--box-shadow-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .theme-buttons button, #langToggleBtn { padding: 8px 15px; border: 1px solid var(--nav-button-border); background-color: var(--nav-button-bg); color: var(--nav-button-text); border-radius: 5px; cursor: pointer; font-family: 'Hind Siliguri', sans-serif; font-weight: 600; transition: all 0.2s; }
+        .theme-buttons button:hover, #langToggleBtn:hover { opacity: 0.8; }
+        .dark-mode-toggle { display: flex; align-items: center; gap: 10px; }
+        .switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+        .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: var(--heading-color-1); }
+        input:checked + .slider:before { transform: translateX(26px); }
+        .navigation { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .nav-button { display: inline-block; padding: 10px 15px; border: 1px solid var(--nav-button-border); border-radius: 5px; text-decoration: none; color: var(--nav-button-text); background-color: var(--nav-button-bg); transition: background-color 0.3s, color 0.3s; font-weight: 500; }
+        .nav-button:hover { background-color: #e0e0e0; }
+        .nav-button.active { background-color: var(--nav-active-bg); color: white; border-color: var(--nav-active-bg); }
+        .nav-button.disabled { pointer-events: none; opacity: 0.5; }
+        .home-button { background-color: #1e88e5; color: white; border-color: #1e88e5; }
+        .home-button:hover { background-color: #1565c0; }
+        footer { text-align: center; margin-top: 40px; padding: 20px; font-size: 0.9em; color: var(--text-color); opacity: 0.8; }
+        .scroll-button { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; border-radius: 50%; background-color: var(--heading-color-1); color: white; border: none; font-size: 24px; cursor: pointer; display: none; justify-content: center; align-items: center; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 1000; transition: opacity 0.3s, visibility 0.3s; }
+        #scrollToBottomBtn { bottom: 80px; background-color: var(--heading-color-2); }
+        .scroll-button:hover { opacity: 0.8; }
+        .lang-en, .lang-bn { display: inline; }
+    </style>
+</head>
+<body data-theme="default">
+
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>
+            <span class="lang-bn">শিল্প ও সংস্কৃতি</span>
+            <span class="lang-en">ART AND CULTURE</span>
+        </h1>
+    </header>
+
+    <div class="controls-wrapper">
+        <div class="theme-buttons">
+            <button data-theme-name="default">Default</button>
+            <button data-theme-name="forest">Forest</button>
+            <button data-theme-name="ocean">Ocean</button>
+            <button data-theme-name="sunset">Sunset</button>
+        </div>
+        <button id="langToggleBtn">বাংলা / English</button>
+        <div class="dark-mode-toggle">
+            <span>দিন/রাত</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Updated Heading -->
+        <h2>
+            <span class="lang-bn">ক্লাস: ০২</span>
+            <span class="lang-en">CLASS: 02</span>
+        </h2>
+        <h3>
+            <span class="lang-bn">বিগত বছরের পরীক্ষার প্রশ্নাবলী</span>
+            <span class="lang-en">Previous Year's Exam Questions</span>
+        </h3>
+
+        <!-- All New Questions for Class 2 Start Here -->
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">২৫. দাদরা তাল নামক হিন্দুস্তানি শাস্ত্রীয় তালে কতটি মাত্রা আছে?</span>
+                <span class="lang-en">25. How many beats are there in the Hindustani classical taal named Dadra Taal?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) 3</li>
+                <li>(B) 6</li>
+                <li>(C) 12</li>
+                <li>(D) 9</li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) 6</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> দাদরা তাল হল একটি জনপ্রিয় ৬-মাত্রার ছন্দচক্র যা দাদরা এবং ঠুমরির মতো হালকা শাস্ত্রীয় এবং আধা-শাস্ত্রীয় সঙ্গীতে ব্যবহৃত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Dadra Taal is a popular 6-beat rhythm cycle (6 matras) used in light classical and semi-classical music like Dadra and Thumri.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">২৬. গুড়ি पड़वा উৎসব কর্ণাটক, তেলেঙ্গানা এবং অন্ধ্রপ্রদেশে আর কী নামে পরিচিত?</span>
+                <span class="lang-en">26. By which other name is the festival Gudi Padwa known in Karnataka, Telangana and Andhra Pradesh?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">বৈশাখী</span><span class="lang-en">Baisakhi</span></li>
+                <li>(B) <span class="lang-bn">উগাদি</span><span class="lang-en">Ugadi</span></li>
+                <li>(C) <span class="lang-bn">অক্ষয় তৃতীয়া</span><span class="lang-en">Akshay Tritiya</span></li>
+                <li>(D) <span class="lang-bn">পোঙ্গল</span><span class="lang-en">Pongal</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) উগাদি</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> মহারাষ্ট্রে গুড়ি पड़वा-র মতো, উগাদি অন্ধ্রপ্রদেশ, তেলেঙ্গানা এবং কর্ণাটকে নববর্ষ হিসেবে পালিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Ugadi is celebrated as the New Year in Andhra Pradesh, Telangana, and Karnataka, similar to Gudi Padwa in Maharashtra.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">২৭. ন্যাশনাল ইনস্টিটিউট অফ ইন্ডিয়ান ক্লাসিক্যাল ডান্স দ্বারা ২০২১ সালের অভিনন্দন সরোজা জাতীয় পুরস্কার কে পেয়েছেন?</span>
+                <span class="lang-en">27. Who received the 2021 Abhinandan Saroja National Award by the National Institute of Indian Classical Dance?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">অপর্ণা সতীশন</span><span class="lang-en">Aparna Satheesan</span></li>
+                <li>(B) <span class="lang-bn">চন্দ্রশেখর কমবার</span><span class="lang-en">Chandrashekhar Kambara</span></li>
+                <li>(C) <span class="lang-bn">প্রিয়দর্শন</span><span class="lang-en">Priyadarshan</span></li>
+                <li>(D) <span class="lang-bn">প্রভা আত্রে</span><span class="lang-en">Prabha Atre</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) অপর্ণা সতীশন</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> অপর্ণা সতীশন, একজন প্রখ্যাত ভারতীয় শাস্ত্রীয় নৃত্যশিল্পী, ভারতীয় শাস্ত্রীয় নৃত্যে তার অবদানের জন্য এই পুরস্কার পেয়েছেন।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Aparna Satheesan, a renowned Indian classical dancer, received this award for her contribution to Indian classical dance.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">২৮. কোনটি মণিপুরের একটি বিশেষ মার্শাল ডান্স ফর্ম?</span>
+                <span class="lang-en">28. Which is an exclusive martial dance form of Manipur?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">সিংঘি ছাম</span><span class="lang-en">Singhi Chamm</span></li>
+                <li>(B) <span class="lang-bn">চাকিয়ার কুথু</span><span class="lang-en">Chakyar Koothu</span></li>
+                <li>(C) <span class="lang-bn">রাঙ্গামা</span><span class="lang-en">Rangama</span></li>
+                <li>(D) <span class="lang-bn">থাং তা</span><span class="lang-en">Thang Ta</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (D) থাং তা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> থাং তা একটি মণিপুরী মার্শাল আর্ট এবং নৃত্য শৈলী যা তলোয়ার এবং বর্শার কৌশল জড়িত, যা তৎপরতা এবং দক্ষতা প্রদর্শন করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Thang Ta is a Manipuri martial art and dance form involving sword and spear techniques, showcasing agility and skill.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">২৯. ভারতের কোন রাজ্যের আদিবাসীরা সারহুল উৎসব পালন করে?</span>
+                <span class="lang-en">29. The tribal people of which Indian state celebrate Sarhul festival?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ঝাড়খণ্ড</span><span class="lang-en">Jharkhand</span></li>
+                <li>(B) <span class="lang-bn">গুজরাট</span><span class="lang-en">Gujarat</span></li>
+                <li>(C) <span class="lang-bn">রাজস্থান</span><span class="lang-en">Rajasthan</span></li>
+                <li>(D) <span class="lang-bn">মধ্যপ্রদেশ</span><span class="lang-en">Madhya Pradesh</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) ঝাড়খণ্ড</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> সারহুল ঝাড়খণ্ডের উপজাতি সম্প্রদায়ের দ্বারা পালিত একটি বসন্ত উৎসব, যা নতুন বছরের শুরু এবং শাল গাছের পূজাকে চিহ্নিত করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Sarhul is a spring festival celebrated by the tribal communities of Jharkhand, marking the beginning of the new year and worship of the Sal tree.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩০. পণ্ডিত জসরাজ, একজন ভারতীয় শাস্ত্রীয় কণ্ঠশিল্পী, কোন ঘরানার অন্তর্গত?</span>
+                <span class="lang-en">30. Pandit Jasraj, an Indian classical vocalist, belongs to which gharana?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">গোয়ালিয়র</span><span class="lang-en">Gwalior</span></li>
+                <li>(B) <span class="lang-bn">মেওয়াতি</span><span class="lang-en">Mewati</span></li>
+                <li>(C) <span class="lang-bn">কিরানা</span><span class="lang-en">Kirana</span></li>
+                <li>(D) <span class="lang-bn">আগ্রা</span><span class="lang-en">Agra</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) মেওয়াতি</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> পণ্ডিত জসরাজ মেওয়াতি ঘরানার একজন কিংবদন্তী কণ্ঠশিল্পী ছিলেন, যিনি তার অনন্য শৈলী এবং হিন্দুস্তানি শাস্ত্রীয় সঙ্গীতে অবদানের জন্য পরিচিত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Pandit Jasraj was a legendary vocalist of the Mewati Gharana, known for his unique style and contributions to Hindustani classical music.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩১. পশ্চিমবঙ্গের সবচেয়ে বড় মেলা কোনটি?</span>
+                <span class="lang-en">31. Which of the following is the largest fair in West Bengal?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">রাস মেলা</span><span class="lang-en">Raas Mela</span></li>
+                <li>(B) <span class="lang-bn">জয়দেব কেন্দুলি মেলা</span><span class="lang-en">Jaydev Kenduli Mela</span></li>
+                <li>(C) <span class="lang-bn">গঙ্গাসাগর মেলা</span><span class="lang-en">Gangasagar Mela</span></li>
+                <li>(D) <span class="lang-bn">রামকেলি মেলা, মালদা</span><span class="lang-en">Ramkeli Mela, Malda</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) গঙ্গাসাগর মেলা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> গঙ্গাসাগর মেলা পশ্চিমবঙ্গের বৃহত্তম মেলা, যা গঙ্গা ও বঙ্গোপসাগরের সঙ্গমস্থলে অনুষ্ঠিত হয় এবং লক্ষ লক্ষ তীর্থযাত্রীকে আকর্ষণ করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Gangasagar Mela is the largest fair in West Bengal, held at the confluence of the Ganges and the Bay of Bengal, attracting millions of pilgrims.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩২. মাধবাচার্য রচিত 'মাধব নিদান'-এ কতটি অধ্যায় রয়েছে?</span>
+                <span class="lang-en">32. Madhavacharya wrote Madhava Nidana which contains how many chapters?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) 96</li>
+                <li>(B) 60</li>
+                <li>(C) 69</li>
+                <li>(D) 90</li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) 96</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> 'মাধব নিদান' হল আয়ুর্বেদের উপর একটি প্রাচীন সংস্কৃত গ্রন্থ যাতে ৯৬টি অধ্যায় রয়েছে এবং এটি রোগের নির্ণয় (নিদান) এর উপর কেন্দ্র করে রচিত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Madhava Nidana is an ancient Sanskrit text on Ayurveda with 96 chapters, focusing on diagnosis (nidana) of diseases.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৩. 'হুলি ভেশা' কোন উপকূলীয় অঞ্চলের একটি জনপ্রিয় লোকনৃত্য?</span>
+                <span class="lang-en">33. 'Huli Vesha' is a popular folk dance in the coastal region of?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">কেরালা</span><span class="lang-en">Kerala</span></li>
+                <li>(B) <span class="lang-bn">ওড়িশা</span><span class="lang-en">Odisha</span></li>
+                <li>(C) <span class="lang-bn">গুজরাট</span><span class="lang-en">Gujarat</span></li>
+                <li>(D) <span class="lang-bn">কর্ণাটক</span><span class="lang-en">Karnataka</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (D) কর্ণাটক</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> হুলি ভেশা (বাঘের নাচ) উপকূলীয় কর্ণাটকে উৎসবের সময়, বিশেষ করে নবরাত্রি এবং দশেরার সময় পরিবেশন করা হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Huli Vesha (Tiger Dance) is performed during festivals in coastal Karnataka, especially during Navratri and Dussehra.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৪. পোঙ্গল, একটি ফসল কাটার উৎসব, কাকে উৎসর্গ করা হয়?</span>
+                <span class="lang-en">34. Pongal, a harvest festival is dedicated to the?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">দেবী সরস্বতী</span><span class="lang-en">Goddess Saraswati</span></li>
+                <li>(B) <span class="lang-bn">অগ্নিদেব</span><span class="lang-en">God of Fire</span></li>
+                <li>(C) <span class="lang-bn">দেবী গঙ্গা</span><span class="lang-en">Goddess Ganga</span></li>
+                <li>(D) <span class="lang-bn">সূর্যদেব</span><span class="lang-en">Sun God</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (D) সূর্যদেব</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> পোঙ্গল একটি তামিল ফসল কাটার উৎসব যা সূর্যদেবকে উৎসর্গ করা হয়, ভালো ফসলের জন্য তাকে ধন্যবাদ জানাতে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Pongal is a Tamil harvest festival dedicated to the Sun God, thanking him for a good harvest.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৫. জোনবিল মেলা ভারতের একমাত্র মেলা যেখানে এখনও বিনিময় প্রথা ব্যবহৃত হয়। এটি কোন রাজ্যে অনুষ্ঠিত হয়?</span>
+                <span class="lang-en">35. Jon Beel Mela is the only fair in India where barter system is still used. In which state does it take place?</span>
+            </h4>
+            <p><em>[RRB NTPC 2021]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">ত্রিপুরা</span><span class="lang-en">Tripura</span></li>
+                <li>(B) <span class="lang-bn">আসাম</span><span class="lang-en">Assam</span></li>
+                <li>(C) <span class="lang-bn">নাগাল্যান্ড</span><span class="lang-en">Nagaland</span></li>
+                <li>(D) <span class="lang-bn">মণিপুর</span><span class="lang-en">Manipur</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) আসাম</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> আসামের জোনবিল মেলা তার ঐতিহ্যবাহী বিনিময় প্রথার জন্য বিখ্যাত, যেখানে লোকেরা টাকা ছাড়াই পণ্য বিনিময় করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Jon Beel Mela in Assam is famous for its traditional barter system, where people exchange goods without money.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৬. প্লেগ নির্মূলের স্মরণে মুহাম্মদ কুলি কুতুব শাহ কোন স্মৃতিস্তম্ভটি নির্মাণ করেছিলেন?</span>
+                <span class="lang-en">36. Which monument was built by Muhammad Quli Qutb Shah to commemorate the eradication of plague?</span>
+            </h4>
+            <p><em>[RRB NTPC 2016]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">আলাই মিনার</span><span class="lang-en">Alai Minar</span></li>
+                <li>(B) <span class="lang-bn">চারমিনার</span><span class="lang-en">Charminar</span></li>
+                <li>(C) <span class="lang-bn">ফতেহ বুর্জ</span><span class="lang-en">Fateh Buxj</span></li>
+                <li>(D) <span class="lang-bn">কুতুব মিনার</span><span class="lang-en">Qutub Minar</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) চারমিনার</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> হায়দ্রাবাদের চারমিনার ১৫৯১ সালে একটি মারাত্মক প্লেগ মহামারীর সমাপ্তি স্মরণে নির্মিত হয়েছিল।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Charminar in Hyderabad was built in 1591 to commemorate the end of a deadly plague.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৭. বুহসু জিবা উৎসব কোন রাজ্যে পালিত হয়?</span>
+                <span class="lang-en">37. Buhsu Jiba is a festival celebrated in the state of?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">সিকিম</span><span class="lang-en">Sikkim</span></li>
+                <li>(B) <span class="lang-bn">নাগাল্যান্ড</span><span class="lang-en">Nagaland</span></li>
+                <li>(C) <span class="lang-bn">হিমাচল প্রদেশ</span><span class="lang-en">Himachal Pradesh</span></li>
+                <li>(D) <span class="lang-bn">ওড়িশা</span><span class="lang-en">Odisha</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) নাগাল্যান্ড</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> বুহসু জিবা নাগাল্যান্ডের সুমি নাগা উপজাতির একটি ঐতিহ্যবাহী উৎসব, যা সমৃদ্ধি এবং ভালো ফসলের জন্য পালিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Buhsu Jiba is a traditional festival of the Sumi Naga tribe in Nagaland, celebrated for prosperity and good harvest.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৮. লোসার উৎসব, যা অরুণাচল প্রদেশে বেশ জনপ্রিয়, প্রধানত কোন উপজাতি দ্বারা পালিত হয়?</span>
+                <span class="lang-en">38. The Losar festival, quite popular in Arunachal Pradesh is mainly celebrated by which tribe?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মনপা</span><span class="lang-en">Monpa</span></li>
+                <li>(B) <span class="lang-bn">আঙ্গামী</span><span class="lang-en">Angami</span></li>
+                <li>(C) <span class="lang-bn">হুনাস</span><span class="lang-en">Hunas</span></li>
+                <li>(D) <span class="lang-bn">আপাতানি</span><span class="lang-en">Apatani</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) মনপা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> লোসার হল তিব্বতি নববর্ষ, যা অরুণাচল প্রদেশের মনপা উপজাতি দ্বারা পালিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Losar is the Tibetan New Year, celebrated by the Monpa tribe in Arunachal Pradesh.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৩৯. রেংমা প্রধানত কোন অঞ্চলের একটি লোকনৃত্য?</span>
+                <span class="lang-en">39. Rengma is primarily a folk dance of?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">রাজস্থান</span><span class="lang-en">Rajasthan</span></li>
+                <li>(B) <span class="lang-bn">বিহার</span><span class="lang-en">Bihar</span></li>
+                <li>(C) <span class="lang-bn">পশ্চিমবঙ্গ</span><span class="lang-en">West Bengal</span></li>
+                <li>(D) <span class="lang-bn">নাগাল্যান্ড</span><span class="lang-en">Nagaland</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (D) নাগাল্যান্ড</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> রেংমা নাগাল্যান্ডের রেংমা নাগা উপজাতির একটি ঐতিহ্যবাহী লোকনৃত্য।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Rengma is a traditional folk dance of the Rengma Naga tribe in Nagaland.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪০. 'শাদ নংক্রেম' নামক পাঁচ দিনব্যাপী ধর্মীয় উৎসব কোন রাজ্যে পালিত হয়?</span>
+                <span class="lang-en">40. In which state is the five day religious festival of 'Shad Nongkrem' celebrated?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">অন্ধ্রপ্রদেশ</span><span class="lang-en">Andhra Pradesh</span></li>
+                <li>(B) <span class="lang-bn">মেঘালয়</span><span class="lang-en">Meghalaya</span></li>
+                <li>(C) <span class="lang-bn">উত্তরপ্রদেশ</span><span class="lang-en">Uttar Pradesh</span></li>
+                <li>(D) <span class="lang-bn">ত্রিপুরা</span><span class="lang-en">Tripura</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) মেঘালয়</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> শাদ নংক্রেম মেঘালয়ে পালিত একটি প্রধান খাসি উৎসব, যা ভালো ফসল এবং সমৃদ্ধির জন্য উদযাপিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Shad Nongkrem is a major Khasi festival celebrated in Meghalaya for a good harvest and prosperity.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪১. সাইকুতি জাই নামক লোকসংগীতের ঐতিহ্য কোন রাজ্যের জন্মস্থান?</span>
+                <span class="lang-en">41. Which of the following states is the cradle of the folk music traditions of Saikuti Zai?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">উড়িষ্যা</span><span class="lang-en">Orissa</span></li>
+                <li>(B) <span class="lang-bn">মিজোরাম</span><span class="lang-en">Mizoram</span></li>
+                <li>(C) <span class="lang-bn">তেলেঙ্গানা</span><span class="lang-en">Telangana</span></li>
+                <li>(D) <span class="lang-bn">গোয়া</span><span class="lang-en">Goa</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) মিজোরাম</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> সাইকুতি জাই মিজোরামের একটি ঐতিহ্যবাহী লোকসংগীতের রূপ, যা মিজো জনগণের সংস্কৃতিকে প্রতিফলিত করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Saikuti Zai is a traditional folk music form of Mizoram, reflecting the culture of the Mizo people.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪২. ড্রি উৎসব প্রধানত কোন রাজ্যের আপাতানি উপজাতি দ্বারা পালিত হয়?</span>
+                <span class="lang-en">42. The Dree Festival is primarily celebrated by the Apatani tribe in the state of?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">পশ্চিমবঙ্গ</span><span class="lang-en">West Bengal</span></li>
+                <li>(B) <span class="lang-bn">কেরালা</span><span class="lang-en">Kerala</span></li>
+                <li>(C) <span class="lang-bn">অরুণাচল প্রদেশ</span><span class="lang-en">Arunachal Pradesh</span></li>
+                <li>(D) <span class="lang-bn">মধ্যপ্রদেশ</span><span class="lang-en">Madhya Pradesh</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) অরুণাচল প্রদেশ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ড্রি অরুণাচল প্রদেশের আপাতানি উপজাতির একটি কৃষি উৎসব, যা ভালো ফসলের জন্য পালিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Dree is an agricultural festival of the Apatani tribe in Arunachal Pradesh, celebrated for a good harvest.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৩. বিখ্যাত 'সাঙ্গাই উৎসব' উত্তর-পূর্ব ভারতের কোন রাজ্য দ্বারা আয়োজিত একটি বার্ষিক সাংস্কৃতিক উৎসব?</span>
+                <span class="lang-en">43. Famous 'Sangai Festival' is an annual cultural festival organized by which state of North-East India?</span>
+            </h4>
+            <p><em>[RRB NTPC 2021]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মণিপুর</span><span class="lang-en">Manipur</span></li>
+                <li>(B) <span class="lang-bn">মেঘালয়</span><span class="lang-en">Meghalaya</span></li>
+                <li>(C) <span class="lang-bn">ত্রিপুরা</span><span class="lang-en">Tripura</span></li>
+                <li>(D) <span class="lang-bn">নাগাল্যান্ড</span><span class="lang-en">Nagaland</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) মণিপুর</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> সাঙ্গাই উৎসব মণিপুরের সংস্কৃতি প্রদর্শন করে এবং এটি রাজ্যের প্রাণী সাঙ্গাই হরিণের নামে নামকরণ করা হয়েছে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Sangai Festival showcases the culture of Manipur and is named after the state animal, the Sangai deer.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৪. অন্ধ্রপ্রদেশের জনপ্রিয় একটি নৃত্য ও সংগীতের সংমিশ্রণ কোনটি যা লাঠি নাচের মতো?</span>
+                <span class="lang-en">44. Which is a popular dance and music combination of Andhra Pradesh similar to the stick dance?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">নিউলিউ</span><span class="lang-en">Neuleu</span></li>
+                <li>(B) <span class="lang-bn">কোলান্নালু</span><span class="lang-en">Kolannalu</span></li>
+                <li>(C) <span class="lang-bn">ভিল্লু পাট্টু</span><span class="lang-en">Villu Pattu</span></li>
+                <li>(D) <span class="lang-bn">ডান্ডিয়া</span><span class="lang-en">Dandiya</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) কোলান্নালু</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> কোলান্নালু ডান্ডিয়ার মতো একটি লাঠি নাচ, যা উৎসবের সময় অন্ধ্রপ্রদেশে পরিবেশিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Kolannalu is a stick dance similar to Dandiya, performed in Andhra Pradesh during festivals.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৫. পণ্ডিত জসরাজ কোন ঘরানার একজন ভারতীয় শাস্ত্রীয় কণ্ঠশিল্পী?</span>
+                <span class="lang-en">45. Pandit Jasraj is an Indian classical vocalist, belonging to which gharana?</span>
+            </h4>
+            <p><em>[RRB JE 2019]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মেওয়াতি</span><span class="lang-en">Mewati</span></li>
+                <li>(B) <span class="lang-bn">আগ্রা</span><span class="lang-en">Agra</span></li>
+                <li>(C) <span class="lang-bn">কিরানা</span><span class="lang-en">Kirana</span></li>
+                <li>(D) <span class="lang-bn">পাতিয়ালা</span><span class="lang-en">Patiala</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) মেওয়াতি</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> পণ্ডিত জসরাজ মেওয়াতি ঘরানার একজন প্রধান প্রতিपादক ছিলেন।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Pandit Jasraj was a leading exponent of the Mewati Gharana.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৬. ২০০৮ সালে ভারতরত্ন প্রাপ্ত পণ্ডিত ভীমসেন যোশী খেয়াল গায়কীর জন্য জনপ্রিয় ছিলেন এবং তিনি কোন ঘরানার অন্তর্গত ছিলেন?</span>
+                <span class="lang-en">46. Pandit Bhimsen Joshi who received Bharat Ratna in 2008 was popular for the khayal form of singing and belonged to the Gharana.</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">গোয়ালিয়র</span><span class="lang-en">Gwalior</span></li>
+                <li>(B) <span class="lang-bn">কিরানা</span><span class="lang-en">Kirana</span></li>
+                <li>(C) <span class="lang-bn">পাতিয়ালা</span><span class="lang-en">Patiala</span></li>
+                <li>(D) <span class="lang-bn">আগ্রা</span><span class="lang-en">Agra</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) কিরানা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ভীমসেন যোশী কিরানা ঘরানার একজন কিংবদন্তী কণ্ঠশিল্পী ছিলেন, যিনি তার খেয়াল গায়কীর জন্য পরিচিত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Bhimsen Joshi was a legendary vocalist of the Kirana Gharana, known for his khayal singing.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৭. কোণার্কের সূর্য মন্দির জনপ্রিয়ভাবে কী নামে পরিচিত?</span>
+                <span class="lang-en">47. The Sun temple at Konark is popularly known as the?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">শ্বেত প্যাগোডা</span><span class="lang-en">White Pagoda</span></li>
+                <li>(B) <span class="lang-bn">কৃষ্ণ প্যাগোডা</span><span class="lang-en">Black Pagoda</span></li>
+                <li>(C) <span class="lang-bn">স্বর্ণ প্যাগোডা</span><span class="lang-en">Golden Pagoda</span></li>
+                <li>(D) <span class="lang-bn">ব্রোঞ্জ প্যাগোডা</span><span class="lang-en">Bronze Pagoda</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) কৃষ্ণ প্যাগোডা</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> কোণার্কের সূর্য মন্দির তার গাঢ় রঙ এবং চেহারার কারণে ব্ল্যাক প্যাগোডা বা কৃষ্ণ প্যাগোডা নামে পরিচিত।</span>
+                <span class="lang-en"><strong>Explanation:</strong> The Sun Temple at Konark is called the Black Pagoda due to its dark color and appearance.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৮. তামিল ভাষাকে ভারতের শাস্ত্রীয় ভাষা হিসেবে ঘোষণা করা হয় কত সালে?</span>
+                <span class="lang-en">48. The Tamil language was declared as the classical language of India in?</span>
+            </h4>
+            <p><em>[RRB Group D 2022]</em></p>
+            <ul>
+                <li>(A) 2005</li>
+                <li>(B) 2002</li>
+                <li>(C) 2004</li>
+                <li>(D) 2003</li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) 2004</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ভারত সরকার ২০০৪ সালে তামিল ভাষাকে তার প্রাচীন ঐতিহ্যের স্বীকৃতিস্বরূপ একটি শাস্ত্রীয় ভাষা হিসেবে ঘোষণা করে।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Tamil was declared a classical language by the Government of India in 2004, recognizing its ancient heritage.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৪৯. সারনাথের সিংহ স্তম্ভ কী দিয়ে তৈরি ছিল?</span>
+                <span class="lang-en">49. The Sarnath Lion Capital was made up of?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">বেলেপাথর</span><span class="lang-en">Sandstone</span></li>
+                <li>(B) <span class="lang-bn">অভ্র</span><span class="lang-en">Mica</span></li>
+                <li>(C) <span class="lang-bn">লোহা</span><span class="lang-en">Iron</span></li>
+                <li>(D) <span class="lang-bn">মার্বেল</span><span class="lang-en">Marble</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (A) বেলেপাথর</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ভারতের জাতীয় প্রতীক হিসেবে গৃহীত সারনাথের সিংহ স্তম্ভটি পালিশ করা বেলেপাথর দিয়ে তৈরি।</span>
+                <span class="lang-en"><strong>Explanation:</strong> The Lion Capital at Sarnath, adopted as India's national emblem, is made of polished sandstone.</span>
+            </blockquote>
+        </div>
+
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫০. কোন ধরনের গায়ন শৈলী ঐতিহ্যগতভাবে পুরুষরা তানপুরা এবং পাখোয়াজ দিয়ে পরিবেশন করে?</span>
+                <span class="lang-en">50. Which style of singing is traditionally performed by men with tanpura and pakhawaj?</span>
+            </h4>
+            <p><em>[RRB NTPC 2022]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">তারানা</span><span class="lang-en">Tarana</span></li>
+                <li>(B) <span class="lang-bn">ঠুমরি</span><span class="lang-en">Thumri</span></li>
+                <li>(C) <span class="lang-bn">ধ্রুপদ</span><span class="lang-en">Dhrupad</span></li>
+                <li>(D) <span class="lang-bn">গজল</span><span class="lang-en">Ghazal</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (C) ধ্রুপদ</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> ধ্রুপদ হল হিন্দুস্তানি শাস্ত্রীয় সঙ্গীতের প্রাচীনতম শৈলী, যা তানপুরা এবং পাখোয়াজ দিয়ে পরিবেশন করা হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Dhrupad is the oldest style of Hindustani classical singing, performed with tanpura and pakhawaj.</span>
+            </blockquote>
+        </div>
+        
+        <div class="mcq-item">
+            <h4>
+                <span class="lang-bn">৫১. কর্ণাটকের কাম্বালা উৎসব মূলত কিসের সাথে সম্পর্কিত?</span>
+                <span class="lang-en">51. The Kambala festival of Karnataka is essentially associated with what?</span>
+            </h4>
+            <p><em>[RRB ALP 2018]</em></p>
+            <ul>
+                <li>(A) <span class="lang-bn">মোরগ লড়াই</span><span class="lang-en">Cock fighting</span></li>
+                <li>(B) <span class="lang-bn">মহিষ দৌড়</span><span class="lang-en">Buffalo race</span></li>
+                <li>(C) <span class="lang-bn">আদিবাসী নৃত্য</span><span class="lang-en">Tribal dance</span></li>
+                <li>(D) <span class="lang-bn">ষাঁড়ের লড়াই</span><span class="lang-en">Bull fighting</span></li>
+            </ul>
+            <blockquote><strong>উত্তর: (B) মহিষ দৌড়</strong><br>
+                <span class="lang-bn"><strong>ব্যাখ্যা:</strong> কাম্বালা হল কর্ণাটকের উপকূলীয় জেলাগুলিতে অনুষ্ঠিত একটি ঐতিহ্যবাহী মহিষের দৌড়, যা সাধারণত কর্দমাক্ত মাঠে অনুষ্ঠিত হয়।</span>
+                <span class="lang-en"><strong>Explanation:</strong> Kambala is a traditional buffalo race held in the coastal districts of Karnataka, usually in muddy fields.</span>
+            </blockquote>
+        </div>
+
+        <h2>ধন্যবাদ</h2>
+    </div>
+
+    <!-- Updated Navigation Bar for Class 2 -->
+    <nav class="navigation">
+        <a href="class1.html" class="nav-button">পূর্ববর্তী</a>
+        <a href="class1.html" class="nav-button">1</a>
+        <a href="class2.html" class="nav-button active">2</a>
+        <a href="class3.html" class="nav-button">3</a>
+        <a href="class4.html" class="nav-button">4</a>
+        <a href="class5.html" class="nav-button">5</a>
+        <a href="class6.html" class="nav-button">6</a>
+        <a href="class7.html" class="nav-button">7</a>
+        <a href="class3.html" class="nav-button">পরবর্তী</a>
+        <a href="../index.html" class="nav-button home-button">Home</a>
+    </nav>
+    
+    <footer>
+        <p>কপিরাইট © 2024 - সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>ডিজাইন ও ডেভেলপমেন্ট: <strong>কেশব সরকার</strong></p>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-button" title="উপরে যান">↑</button>
+    <button id="scrollToBottomBtn" class="scroll-button" title="নিচে যান">↓</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language Toggle Functionality
+            const langToggleButton = document.getElementById('langToggleBtn');
+            const allBengaliElements = document.querySelectorAll('.lang-bn');
+            const allEnglishElements = document.querySelectorAll('.lang-en');
+
+            function setLanguage(lang) {
+                if (lang === 'en') {
+                    allBengaliElements.forEach(el => el.style.display = 'none');
+                    allEnglishElements.forEach(el => el.style.display = 'inline');
+                    document.documentElement.lang = 'en';
+                } else {
+                    allEnglishElements.forEach(el => el.style.display = 'none');
+                    allBengaliElements.forEach(el => el.style.display = 'inline');
+                    document.documentElement.lang = 'bn';
+                }
+                localStorage.setItem('selected_language', lang);
+            }
+
+            langToggleButton.addEventListener('click', () => {
+                const currentLang = localStorage.getItem('selected_language') || 'bn';
+                const newLang = currentLang === 'bn' ? 'en' : 'bn';
+                setLanguage(newLang);
+            });
+
+            const savedLang = localStorage.getItem('selected_language') || 'bn';
+            setLanguage(savedLang);
+
+            // Theme and Dark Mode functionality
+            const themeButtons = document.querySelectorAll('.theme-buttons button');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            function applyTheme(theme) { body.dataset.theme = theme; localStorage.setItem('selected_theme', theme); }
+            function applyMode(mode) { if (mode === 'dark') { body.classList.add('dark-mode'); darkModeToggle.checked = true; } else { body.classList.remove('dark-mode'); darkModeToggle.checked = false; } localStorage.setItem('selected_mode', mode); }
+            const savedTheme = localStorage.getItem('selected_theme');
+            const savedMode = localStorage.getItem('selected_mode');
+            if (savedTheme) applyTheme(savedTheme);
+            if (savedMode) applyMode(savedMode);
+            themeButtons.forEach(button => { button.addEventListener('click', () => { applyTheme(button.dataset.themeName); }); });
+            darkModeToggle.addEventListener('change', () => { applyMode(darkModeToggle.checked ? 'dark' : 'light'); });
+
+            // Scroll buttons functionality
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            const scrollToBottomBtn = document.getElementById('scrollToBottomBtn');
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const bodyHeight = document.body.offsetHeight;
+                if (scrollPosition > 200) { scrollToTopBtn.style.display = 'flex'; } else { scrollToTopBtn.style.display = 'none'; }
+                if (scrollPosition + windowHeight < bodyHeight - 100) { scrollToBottomBtn.style.display = 'flex'; } else { scrollToBottomBtn.style.display = 'none'; }
+            });
+            scrollToTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            scrollToBottomBtn.addEventListener('click', () => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); });
+            
+            // Auto-scroll with Spacebar
+            let isAutoScrolling = false;
+            let scrollInterval;
+            const scrollSpeed = 1; 
+            const scrollDelay = 15; 
+
+            window.addEventListener('keydown', (event) => {
+                if (event.key === ' ') {
+                    event.preventDefault(); 
+                    if (isAutoScrolling) {
+                        clearInterval(scrollInterval);
+                        isAutoScrolling = false;
+                    } else {
+                        isAutoScrolling = true;
+                        scrollInterval = setInterval(() => {
+                            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                                clearInterval(scrollInterval);
+                                isAutoScrolling = false;
+                            } else {
+                                window.scrollBy(0, scrollSpeed);
+                            }
+                        }, scrollDelay);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

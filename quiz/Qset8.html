@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ৮ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="Qset7.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset9.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 8 (প্রশ্ন ৭১-৮০)",
+            questions: [
+                { question: "গুণাঢ্যের 'বৃহৎকথা' কোন ভাষায় লেখা?", options: ["মৃচ্ছকটিক", "পঞ্চতন্ত্র", "বৃহৎকথা", "কথাসরিৎসাগর"], answer: 2, explanation: "গুণাঢ্য রচিত বৃহৎকথা পৈশাচী ভাষায় লেখা একটি প্রাচীন ভারতীয় মহাকাব্য।" },
+                { question: "১৫ই আগস্ট প্রধানমন্ত্রী কোথা থেকে জাতির উদ্দেশে ভাষণ দেন?", options: ["সংসদ", "চাঁদনী চক", "লাল কেল্লা", "আলিবাগ"], answer: 2, explanation: "ভারতের প্রধানমন্ত্রী স্বাধীনতা দিবসে লাল কেল্লা থেকে জাতির উদ্দেশে ভাষণ দেন।" },
+                { question: "মধ্যপ্রদেশের কোন শহরে কুম্ভ মেলা অনুষ্ঠিত হয়?", options: ["গোয়ালিয়র", "ভোপাল", "উজ্জয়িনী", "ইন্দোর"], answer: 2, explanation: "উজ্জয়িনী মধ্যপ্রদেশের সেই শহর যেখানে কুম্ভ মেলা (সিংহস্থ) অনুষ্ঠিত হয়।" },
+                { question: "কৃষ্ণানাট্টম নিচের কোন রাজ্যের একটি বিখ্যাত নৃত্য?", options: ["অন্ধ্রপ্রদেশ", "কর্ণাটক", "কেরালা", "তামিলনাড়ু"], answer: 2, explanation: "কৃষ্ণানাট্টম কেরালার একটি ঐতিহ্যবাহী নৃত্য-নাট্য।" },
+                { question: "সিকিমের লোকেরা লবব ধুচেন উদযাপন করে, যা स्वर्ग থেকে পৃথিবীতে কার অবতরণকে চিহ্নিত করে?", options: ["ভগবান বিষ্ণু", "ভগবান বুদ্ধ", "ভগবান শিব", "ভগবান মহাবীর"], answer: 1, explanation: "লবব ধুচেন একটি বৌদ্ধ উৎসব যা ভগবান বুদ্ধের স্বর্গ থেকে পৃথিবীতে অবতরণকে চিহ্নিত করে।" },
+                { question: "প্রাচীন হিন্দু দর্শনে জীবনের কয়টি পর্যায়ের কথা বলা হয়েছে?", options: ["চারটি", "পাঁচটি", "তিনটি", "দুটি"], answer: 0, explanation: "চারটি আশ্রম হল ব্রহ্মচর্য, গার্হস্থ্য, বাণপ্রস্থ এবং সন্ন্যাস।" },
+                { question: "প্রাচীন ভারতীয় দর্শন মতে, সবকিছু কয়টি মৌলিক উপাদান দিয়ে গঠিত?", options: ["2", "4", "3", "5"], answer: 3, explanation: "পাঁচটি উপাদান (পঞ্চমহাভূত) হল পৃথিবী, জল, আগুন, বায়ু এবং আকাশ।" },
+                { question: "সমসাময়িক কর্ণাটকী সঙ্গীতে কতগুলি মেলকর্তা রাগ রয়েছে?", options: ["72", "82", "62", "52"], answer: 0, explanation: "কর্ণাটকী সঙ্গীতে ৭২টি মেলকর্তা রাগ (জনক রাগ) রয়েছে।" },
+                { question: "ডঃ এল. সুব্রহ্মণ্যম কোন বাদ্যযন্ত্র বাজান?", options: ["সেতার", "সরোদ", "বেহালা", "গিটার"], answer: 2, explanation: "ডঃ এল. সুব্রহ্মণ্যম একজন বিশ্ববিখ্যাত বেহালাবাদক।" },
+                { question: "রেচুংমা, ঘা তো কিটো এবং চি রমু কোন অঞ্চলের নৃত্য শৈলী?", options: ["সিকিম", "মণিপুর", "আন্দামান ও নিকোবর দ্বীপপুঞ্জ", "গোয়া"], answer: 0, explanation: "এগুলি সিকিমের ঐতিহ্যবাহী লোকনৃত্য।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

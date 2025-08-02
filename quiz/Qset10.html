@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ১০ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="Qset9.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset11.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 10 (প্রশ্ন ৯১-১০০)",
+            questions: [
+                { question: "প্রয়াগ সঙ্গীত সমিতি কত সালে প্রতিষ্ঠিত হয়েছিল?", options: ["1952", "1901", "1926", "1915"], answer: 2, explanation: "প্রয়াগ সঙ্গীত সমিতি ১৯২৬ সালে প্রয়াগরাজে প্রতিষ্ঠিত হয়েছিল।" },
+                { question: "কান্ডারিয়া মহাদেব মন্দিরটি কোন রাজবংশের রাজা ধঙ্গদেব দ্বারা নির্মিত হয়েছিল?", options: ["রাষ্ট্রকূট", "চালুক্য", "চান্দেলা", "কলচুরি"], answer: 2, explanation: "খাজুরাহোর কান্ডারিয়া মহাদেব মন্দিরটি চান্দেলা রাজবংশ দ্বারা নির্মিত হয়েছিল।" },
+                { question: "অঞ্জলি ইলা মেনন কে?", options: ["ভারতীয় রাজনীতিবিদ", "ভরতনাট্যম নৃত্যশিল্পী", "জনপ্রিয় সঙ্গীতশিল্পী", "ভারতীয় মহিলা শিল্পী"], answer: 3, explanation: "অঞ্জলি ইলা মেনন একজন প্রখ্যাত ভারতীয় সমসাময়িক শিল্পী।" },
+                { question: "কোণার্কের মন্দিরটি কোন শতকে নির্মিত হয়েছিল?", options: ["১০ম শতক", "১২শ শতক", "১৩শ শতক", "১১শ শতক"], answer: 2, explanation: "কোণার্কের সূর্য মন্দিরটি ১৩শ শতকে রাজা নরসিংহদেব প্রথম দ্বারা নির্মিত হয়েছিল।" },
+                { question: "পঞ্চতন্ত্রের উপকথাগুলি কে রচনা করেছেন বলে মনে করা হয়?", options: ["মোল্লা নাসিরুদ্দিন", "বিষ্ণু শর্মা", "রাজা সুদর্শন", "তেনালী রমন"], answer: 1, explanation: "পঞ্চতন্ত্র হল বিষ্ণু শর্মা রচিত উপকথার একটি প্রাচীন ভারতীয় সংগ্রহ।" },
+                { question: "নাগাল্যান্ডের কোন্যাক উপজাতি দ্বারা পালিত বসন্ত উৎসব কী নামে পরিচিত?", options: ["মোপিন", "গারিয়া পূজা", "মিয়োকো", "আওলিয়াং মন্যু"], answer: 3, explanation: "আওলিয়াং মন্যু নাগাল্যান্ডের কোন্যাক উপজাতির প্রধান বসন্ত উৎসব।" },
+                { question: "লোকনৃত্য এবং রাজ্যের নিচের কোন জোড়াটি সঠিকভাবে মেলানো হয়নি?", options: ["মহা রাস - মণিপুর", "লেজিম - মহারাষ্ট্র", "ঘুমর - কেরালা", "নাটি - হিমাচল প্রদেশ"], answer: 2, explanation: "ঘুমর রাজস্থানের একটি লোকনৃত্য, কেরালার নয়।" },
+                { question: "পাঞ্জাবি উৎসব লোহরিতে প্রকৃতির কোন উপাদানের পূজা করা হয়?", options: ["বায়ু", "পৃথিবী", "জল", "আগুন"], answer: 3, explanation: "লোহড়ির সময় আগুনের পূজা করা হয়, যা উষ্ণতা এবং সূর্যের প্রতীক।" },
+                { question: "নিচের কে গিটারকে হিন্দুস্তানি শাস্ত্রীয় সঙ্গীতে জনপ্রিয় করেছেন?", options: ["উস্তাদ আলী আকবর খান", "পণ্ডিত ব্রিজ ভূষণ কাবরা", "পণ্ডিত শিবকুমার শর্মা", "পণ্ডিত হরিপ্রসাদ চৌরাসিয়া"], answer: 1, explanation: "পণ্ডিত ব্রিজ ভূষণ কাবরাকে হিন্দুস্তানি শাস্ত্রীয় সঙ্গীতে গিটার প্রবর্তনের কৃতিত্ব দেওয়া হয়।" },
+                { question: "কোন ভারতীয় শিল্পকলা বিহার ও নেপালের মিথিলা অঞ্চলে চর্চা করা হয়?", options: ["মধুবনী চিত্রকলা", "ওয়ারলি চিত্রকলা", "পটচিত্র", "কলমকারি"], answer: 0, explanation: "মধুবনী চিত্রকলা বিহার ও নেপালের মিথিলা অঞ্চলের একটি ঐতিহ্যবাহী শিল্পকলা।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

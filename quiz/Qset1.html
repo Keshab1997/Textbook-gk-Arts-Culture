@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ১ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="#" class="btn btn-secondary disabled"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset2.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 1 (প্রশ্ন ১-১০)",
+            questions: [
+                { question: "ওস্তাদ মহি বাহাউদ্দিন ডাগর কোন বাদ্যযন্ত্রের সাথে যুক্ত একজন কিংবদন্তী সঙ্গীতশিল্পী?", options: ["সেতার", "রুদ্রবীণা", "তবলা", "বাঁশি"], answer: 1, explanation: "ওস্তাদ মহি বাহাউদ্দিন ডাগর একজন বিখ্যাত রুদ্রবীণা বাদক, যিনি ডাগর ঘরানার ঐতিহ্যের ধারক।" },
+                { question: "হিমাচল প্রদেশের কোন জনপ্রিয় লোকনৃত্যে নৃত্য পরিবেশনের শেষে দেব-দেবীদের প্রতি শ্রদ্ধা জানাতে নর্তকীরা যজ্ঞ করে?", options: ["মধ্যপ্রদেশ", "উত্তরপ্রদেশ", "হিমাচল প্রদেশ", "অরুণাচল প্রদেশ"], answer: 2, explanation: "হিমাচল প্রদেশের 'নাটি' নৃত্যের শেষে এই ধরনের যজ্ঞের প্রথা দেখা যায়।" },
+                { question: "কোন সমসাময়িক চিত্রশিল্পী মহাত্মা গান্ধীর উপর একটি সিরিজ চিত্রকর্ম তৈরি করেছিলেন?", options: ["অমৃতা শেরগিল", "রাম কিঙ্কর", "এম. এফ. হুসেন", "অতুল দোদিয়া"], answer: 2, explanation: "মকবুল ফিদা হুসেন (এম. এফ. হুসেন) মহাত্মা গান্ধীর জীবন ও আদর্শের উপর ভিত্তি করে অনেকগুলো বিখ্যাত চিত্রকর্ম তৈরি করেছিলেন।" },
+                { question: "নিচের কোনটি আসামের একটি লোকনৃত্য?", options: ["গিদ্ধা", "লেজিম", "নাটি", "বাগুরুম্বা"], answer: 3, explanation: "বাগুরুম্বা আসামের বোড়ো উপজাতির একটি ঐতিহ্যবাহী লোকনৃত্য।" },
+                { question: "নিচের কোনটি হিমাচল প্রদেশের একটি লোকনৃত্য?", options: ["নাটি", "লেজিম", "বাগুরুম্বা", "গিদ্ধা"], answer: 0, explanation: "নাটি হিমাচল প্রদেশের একটি জনপ্রিয় এবং ঐতিহ্যবাহী লোকনৃত্য।" },
+                { question: "পার্শ্বনাথ মন্দির কোন রাজ্যে অবস্থিত?", options: ["মধ্যপ্রদেশ", "রাজস্থান", "কর্ণাটক", "কেরালা"], answer: 2, explanation: "বিখ্যাত পার্শ্বনাথ জৈন মন্দিরটি কর্ণাটকের হাসান জেলার শ্রাবণবেলগোলাতে অবস্থিত।" },
+                { question: "নিচের কোনটি পাঞ্জাবের একটি লোকনৃত্য?", options: ["বাগুরুম্বা", "লেজিম", "নাটি", "গিদ্ধা"], answer: 3, explanation: "গিদ্ধা পাঞ্জাব অঞ্চলের মহিলাদের একটি জনপ্রিয় লোকনৃত্য।" },
+                { question: "কোন বেদে সর্বাধিক সংখ্যক শ্লোক রয়েছে?", options: ["ঋগ্বেদ", "অথর্ববেদ", "সামবেদ", "যজুর্বেদ"], answer: 0, explanation: "ঋগ্বেদ হল চারটি বেদের মধ্যে প্রাচীনতম এবং এতে ১০২৮টি সূক্ত বা শ্লোক রয়েছে।" },
+                { question: "'খান্ডভি' ভারতের কোন রাজ্যের একটি সুস্বাদু খাবার?", options: ["মহারাষ্ট্র", "গুজরাট", "কর্ণাটক", "ওড়িশা"], answer: 1, explanation: "খান্ডভি হল একটি জনপ্রিয় গুজরাটি খাবার যা বেসন এবং দই দিয়ে তৈরি করা হয়।" },
+                { question: "বিখ্যাত সোমনাথ মন্দির কোথায় অবস্থিত?", options: ["তামিলনাড়ু", "উত্তরপ্রদেশ", "গুজরাট", "রাজস্থান"], answer: 2, explanation: "সোমনাথ মন্দির গুজরাটের সৌরাষ্ট্রে অবস্থিত একটি বিখ্যাত শিব মন্দির।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

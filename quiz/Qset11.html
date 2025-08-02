@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কুইজ সেট ১১ - শিল্প ও সংস্কৃতি</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="day-mode">
+    <main class="quiz-page-container">
+        <header class="quiz-header">
+            <h1 id="quiz-title">লোড হচ্ছে...</h1>
+            <div class="score-board">
+                <span id="correct-count">✔️ 0</span>
+                <span id="wrong-count">❌ 0</span>
+                <span id="timer">00:00</span>
+            </div>
+            <button id="mode-toggle" class="mode-toggle-btn"><i class="fas fa-moon"></i></button>
+        </header>
+        <div id="quiz-container"><p class="text-center font-semibold">প্রশ্ন লোড হচ্ছে...</p></div>
+        <div class="page-navigation">
+            <a href="Qset10.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> পূর্ববর্তী</a>
+            <a href="../index.html" class="btn btn-primary"><i class="fas fa-home"></i> হোম</a>
+            <a href="Qset12.html" class="btn btn-secondary">পরবর্তী <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+    <script>
+        const quizSet = {
+            name: "শিল্প ও সংস্কৃতি - Set 11 (প্রশ্ন ১০১-১১০)",
+            questions: [
+                { question: "নিচের কোনটি এক ধরনের তারযুক্ত বাদ্যযন্ত্র নয়?", options: ["বেস", "বেহালা", "টুবা", "সেলো"], answer: 2, explanation: "টুবা একটি পিতলের বায়ু-বাদ্যযন্ত্র, তারযুক্ত বাদ্যযন্ত্র নয়।" },
+                { question: "নিচের কোন মূর্তিটি একজন ফরাসি ভাস্কর দ্বারা ডিজাইন করা স্বাধীনতার প্রতীক?", options: ["স্ট্যাচু অফ ইউনিটি", "স্ট্যাচু অফ লিবার্টি", "স্ট্যাচু অফ ল", "জিউসের মূর্তি"], answer: 1, explanation: "মার্কিন যুক্তরাষ্ট্রের স্ট্যাচু অফ লিবার্টি ফরাসি ভাস্কর ফ্রেডেরিক অগাস্ট বার্থোল্ডি দ্বারা ডিজাইন করা হয়েছিল।" },
+                { question: "বিষু ভারতের কোন রাজ্যের অন্যতম বিখ্যাত উৎসব?", options: ["কেরালা", "ওড়িশা", "পশ্চিমবঙ্গ", "গুজরাট"], answer: 0, explanation: "বিষু কেরালায় পালিত মালায়ালম নববর্ষ উৎসব।" },
+                { question: "মহারাষ্ট্রের ঐতিহ্যবাহী লোকনাট্যের নাম কী?", options: ["রাসলীলা", "নৌটঙ্কি", "তমাসা", "সোয়াং"], answer: 2, explanation: "তমাসা মহারাষ্ট্রের একটি ঐতিহ্যবাহী লোকনাট্য।" },
+                { question: "ইসলামিক কোন পরিভাষাটি প্রতি বছর দাতব্য কাজে সম্পদের একটি নির্দিষ্ট অংশ দান করার বাধ্যবাধকতা বোঝায়?", options: ["মুদারাবাহ", "জাকাত", "ইজারা", "মুশারাকাহ"], answer: 1, explanation: "জাকাত ইসলামের পাঁচটি স্তম্ভের মধ্যে একটি, যা দানকে বোঝায়।" },
+                { question: "২০১১ সালের আদমশুমারি অনুসারে, ভারতের কত শতাংশ মানুষ হিন্দিতে কথা বলে?", options: ["42.03%", "41.03%", "44.04%", "43.63%"], answer: 3, explanation: "২০১১ সালের আদমশুমারি অনুসারে, ৪৩.৬৩% ভারতীয় তাদের প্রথম ভাষা হিসাবে হিন্দি ভাষায় কথা বলেন।" },
+                { question: "'চাপচার কুট' উৎসব কোন রাজ্যে পালিত হয়?", options: ["কেরালা", "আসাম", "মিজোরাম", "সিকিম"], answer: 2, explanation: "চাপচার কুট মিজোরামে পালিত একটি বসন্ত উৎসব।" },
+                { question: "নিচের কোনটি পাঞ্জাবে ফসল কাটার মৌসুমে জনপ্রিয় একটি লোকনৃত্য?", options: ["ওড়িশি", "কথক", "ভাংড়া", "গরবা"], answer: 2, explanation: "ভাংড়া পাঞ্জাবের একটি প্রাণবন্ত লোকনৃত্য।" },
+                { question: "হাওয়া মহল কোথায় অবস্থিত?", options: ["জয়পুর", "যোধপুর", "বিকানের", "উদয়পুর"], answer: 0, explanation: "হাওয়া মহল রাজস্থানের জয়পুরে অবস্থিত।" },
+                { question: "কালিদাসের কোন রচনাটি কার্তিকেয়র জন্মের প্রেক্ষাপটের উপর ভিত্তি করে রচিত?", options: ["মেঘদূত", "রঘুবংশ", "কুমারসম্ভব", "ঋতুসংহার"], answer: 2, explanation: "কুমারসম্ভব শিব ও পার্বতীর পুত্র কার্তিকেয়র জন্ম বর্ণনা করে।" }
+            ]
+        };
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
